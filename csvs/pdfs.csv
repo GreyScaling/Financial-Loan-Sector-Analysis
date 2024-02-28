@@ -1,0 +1,944 @@
+,Title,Content,Site-Name,Sector,Country
+0,Impact of the COVID-19 pandemic on a tertiary care public hospital in Singapore: resources and economic costs,"Impact of the COVID-19 pandemic on a tertiary care
+public hospital in Singapore: resources and economiccosts
+Y. Caia, S. Kwekb, S.S.L. Tangc, S.E. Saffarid, E. Luma, S. Yoona, J.P. Ansaha,
+D.B. Matchara, A.L. Kwac,e,f, K.A. Angg, J. Thumbooh, M.E.H. Onga,j,
+N. Gravesa,*
+aHealth Services & Systems Research, Duke-NUS Medical School, Singapore
+bDuke-NUS Medical School, Singapore
+cDepartment of Pharmacy, Singapore General Hospital, Singapore
+dCentre for Quantitative Medicine, Duke-NUS Medical School, Singapore
+eSingHealth Duke-NUS Medicine Academic Clinical Programme, Singapore
+fEmerging Infectious Diseases, Duke-NUS Medical School, Singapore
+gFinance Department, Singapore General Hospital, Singapore
+hDepartment of Rheumatology and Immunology, Singapore General Hospital, Singapore
+jDepartment of Emergency Medicine, Singapore General Hospital, Singapore
+ARTICLE INFO
+Article history:
+Received 22 September 2021
+Accepted 5 December 2021Available online 11 December
+2021
+Keywords:
+COVID-19
+Hospital costsDisease outbreak
+SUMMARY
+Background: The COVID-19 pandemic has prompted hospitals to respond with stringent
+measures. Accurate estimates of costs and resources used in outbreaks can guide evalu-
+ations of responses. We report on the ﬁnancial expenditure associated with COVID-19, the
+bed-days used for COVID-19 patients and hospital services displaced due to COVID-19 in aSingapore tertiary hospital.
+Methods: We conducted a retrospective cost analysis from January to December 2020 in
+the largest public hospital in Singapore. Costs were estimated from the hospital per-spective. We examined ﬁnancial expenditures made in direct response to COVID-19;hospital admissions data related to COVID-19 inpatients; and the number of outpatient
+and emergency department visits, non-emergency surgeries, inpatient days in 2020,
+compared with preceding years of 2018 and 2019. Bayesian time-series was used to esti-mate the magnitude of displaced services.
+Results: USD $41.96 million was incurred in the hospital for COVID-19-related expenses.
+Facilities set-up and capital assets accounted for 51.6% of the expenditure; patient-caresupplies comprised 35.1%. Of the 19,611 inpatients tested for COVID-19 in 2020, 727
+(3.7%) had COVID-19. The total inpatient- and intensive care unit (ICU)-days for COVID-19
+patients in 2020 were 8009 and 8 days, respectively. A decline in all hospital services wasobserved from February following a raised disease outbreak alert level; most services
+quickly resumed when the lockdown was lifted in June.
+* Corresponding author. Address: Programme in Health Services and Systems Research, Duke-NUS Medical School, 8 College Road 169857, Sin-
+gapore. Tel.: þ65 8333 5906.
+E-mail address: n.graves@duke-nus.edu.sg (N. Graves).
+Available online at www.sciencedirect.com
+Journal of Hospital Infection
+journal homepage: www.elsevier.com/locate/jhin
+https://doi.org/10.1016/j.jhin.2021.12.007
+0195-6701/ ª2021 The Healthcare Infection Society. Published by Elsevier Ltd. All rights reserved.Journal of Hospital Infection 121 (2022) 1 e8 Conclusion: COVID-19 led to an increase in healthcare expenses and a displacement in
+hospital services. Our ﬁndings are useful for informing economic evaluations of COVID-19
+response and provide some information about the expected costs of future outbreaks.
+ª2021 The Healthcare Infection Society. Published by Elsevier Ltd. All rights reserved.
+Introduction
+Coronavirus disease 2019 (COVID-19) was ﬁrst reported to the
+World Health Organization (WHO) from Wuhan, China, inDecember 2019 [ 1]. Caused by the severe acute respiratory
+syndrome coronavirus-2 (SARS-CoV-2), the infection spread
+worldwide within a few months and resulted in a global pan-
+demic [ 2]. The ﬁrst documented case of COVID-19 was identiﬁed
+in Singapore on 23
+rdJanuary 2020 in a traveller from Wuhan,
+China [ 3]. On 7thFebruary 2020 the Ministry of Health Singapore
+(MOH) raised the Disease Outbreak Response Condition (DOR-SCON) alert level from yellow to orange (Supplementary data),
+indicating the severe nature of COVID-19 and the increased risk
+of community spread [ 4]. On 7
+thApril 2020, the Singapore Gov-
+ernment further announced a circuit breaker, which was
+essentially a lockdown period aimed at minimizing movements
+and interactions to limit the spread of community and dormitoryCOVID-19 cases that had been increasing since March 2020 [ 4]. As
+a result of the circuit breaker, all schools and non-essential
+businesses were closed, social gatherings were prohibited, and
+residents were requested to stay home. The circuit breaker wasprogressively lifted from 1
+stJune 2020, and non-essential serv-
+ices were resumed in phases.
+The spread of COVID-19 has placed healthcare systems under
+immense pressure and imposed a considerable ﬁnancial
+healthcare burden globally and in Singapore [ 5,6]. In addition to
+the direct costs associated with the healthcare resource uti-lization in COVID-19 patients, hospitals need to respond withenhanced infection control measures such as screening, testing
+and personal protective equipment (PPE), incur a reduction in
+ward capacity, and add resources to emergency department,patient isolation facilities and intensive care units (ICUs) [ 4,6,7].
+Moreover, hospitals also defer or cancel elective procedures and
+other ‘non-essential’ services, resulting in potential reductionsin hospital revenue and impact on patient outcomes [ 6,8,9].
+For decision makers to effectively plan for funds and
+resource allocation in future outbreaks, it is useful to under-stand the costs and resources used in managing contemporary
+outbreaks [ 10]. This is because the management of outbreaks
+takes up scarce healthcare resources which are inevitablydiverted from other health programmes. There is limited localdata available describing the costs and resource utilization for
+COVID-19. The aim of this study was to describe the direct
+expenditures incurred in the prevention or management ofCOVID-19, number of bed-days used in COVID-19 patients, and
+changes in hospital services due to COVID-19 in a large tertiary
+hospital in Singapore.
+Materials and methods
+Study design and setting
+We conducted a retrospective cost analysis from the hos-
+pital’s perspective in Singapore General Hospital, which is thelargest public hospital in Singapore. The 1900-bed tertiary
+acute-care hospital, which provides a comprehensive range ofmedical services including oncological and haematologicalservices, solid organ transplant, and tertiary burns manage-
+ment, accounted for approximately 15% of all acute-care hos-
+pital beds in Singapore in 2019. The hospital has an isolationward consisting of 35 single rooms and 16 beds in cohort-rooms,
+with negative-pressure infection isolation capabilities. In 2018
+and 2019, the hospital had an inpatient occupancy rate of84.4% and 82.7%, respectively. Most of the annual budget is
+provided by the government through block-based and/or
+activity-based funding; less than 13% is derived from theadmission of private patients [ 11]. Our study was reviewed by
+the institutional ethics review board (CIRB ref. 2020/2089).
+Given the use of de-identiﬁed data exclusively, informed con-sent was waived.
+Measures adopted by the hospital because of the
+COVID-19 pandemic
+a.Overview of government response
+On 7thFebruary 2020, the Singapore government raised the
+DORSCON level from yellow to orange after the ﬁrst COVID-19
+community transmission cases were conﬁrmed (Supple-mentary data). This was quickly followed a circuit breaker on
+7
+thApril 2020, where schools and all non-essential services
+were halted [ 12].
+b.Healthcare workers
+In response to the DORSCON orange status, several pro-
+tective measures, which were escalated/de-escalated inresponse to the rapidly evolving epidemiology of the pandemic,were implemented across the hospital. Mask wearing and twice
+daily temperature checks were mandated for staff. Staff who
+developed fever or respiratory symptoms had to visit the staffclinic, where a COVID-19 swab test was performed and a ﬁve-
+day medical leave was mandated. Local conferences and ofﬁ-
+cial overseas trips were cancelled. Staff returning from high-risk countries were placed on a mandatory 14-day quar-
+antine. Vacation leave was cancelled for all staff to allow for
+rapid deployment for COVID-19-related processes. Inter-hospital movement of patients and healthcare workers wasrestricted.
+c.Outpatient and emergency department
+The number of hospital visitors was restricted. Temperature
+screening stations and questionnaires were set-up at all hos-
+pital entrances to determine the visitors’ travel history, con-
+tact history and presence of acute respiratory symptoms (ARI).Dedicated ‘fever areas’ were set up at the emergency
+department, so that high-risk patients presenting with fever,Y. Cai et al. / Journal of Hospital Infection 121 (2022) 1 e8 2 respiratory symptoms, or epidemiologic risk factors were sep-
+arated from the common waiting areas and tested for COVID-19
+using oropharyngeal swabs for SARS-CoV-2 PCR [ 13]. Strict
+limitations were placed on outpatient and elective surgeryservices [ 14]. For patients requiring repeat medications, the
+hospital’s pharmacy instituted electronic ﬁlling of pre-
+scriptions with home delivery [ 15]. Gradual resumption of
+outpatient and elective surgeries were allowed when the cir-cuit breaker was lifted efrom 1
+stJune 2020, specialist out-
+patient visits and medical procedures were ﬁrst resumed with
+teleconsultation being the preferred mode of service provision;from 19
+thJune 2020, screening services and pre-employment
+check-up were also resumed.
+d.Inpatient
+The measures taken in the inpatient setting were described
+by Wee et al. [7]. Brieﬂy, patients presenting with ARI and high
+COVID-19 risk were admitted to isolation wards, while thosewith ARI and low COVID-19 risk were placed in ARI wards con-
+verted from general wards [ 7]. Oropharyngeal COVID-19 swabs
+for SARS-CoV-2 PCR were regularly performed for all patients inARI wards and isolation wards [ 7]. An infection control bundle,
+comprising infrastructural enhancements, improved PPE,
+environmental surveillance, patient surveillance and social
+distancing was implemented in ARI wards. As part of the pan-demic preparedness response, the hospital additionally set up
+a new isolation facility with 50 isolation single rooms to ensure
+that the hospital had reserve capacity to respond to a full-blown community outbreak.
+e.External facilities
+COVID-19 testing services and medical services were
+extended by the hospital to external facilities [ 16]. This
+included eight dormitories where the COVID-19 outbreak were
+predominantly occurring, two swab isolation facilities, and onecommunity care facility (CCF) housing low-risk COVID-19patients. In the CCF, healthcare staff provided round-the-clock
+essential primary care and medical consultation. Pharmacists
+stocked key essential medications, packaged and dispensedthem remotely [ 16].Data sources
+Direct expenditure associated with the management or
+prevention of COVID-19 from January 2020 to December 2020,
+including costs expended for the support of community COVID-19 operations, was obtained from the hospital’s ﬁnancedepartment. These costs were classiﬁed as: capital assets and
+facilities set-up for the prevention or management of COVID-
+19, labour-related costs, patient-care-related materials andsupplies, and non-patient-care materials, related to the pre-
+vention or management of COVID-19, and costs associated
+with services for external facilities. All costs were presentedin 2020 US dollars (USD) (1 Singapore dollar ¼1.354 USD).
+Time losses in existing healthcare staff or time spent by
+existing healthcare staff redeployed for COVID-19 relatedprocesses and overhead costs were not considered as thesewere deemed to be sunk costs. Lost revenue due to deferment
+of services was also not included as it was not deemed to be
+direct expenditure. Data on patients hospitalized with COVID-19 from January to December 2020 were identiﬁed from the
+hospital’s electronic database. Data collected were length of
+inpatient stay and length of stay in the ICU, number of COVID-19 tests done, and discharge status. To describe changes in
+hospital services due to COVID-19, weekly data pertaining to
+number of outpatient visits, non-emergency surgeries, inpa-tient days, and emergency department visits for 2020 and the
+preceding years of 2018 and 2019 were extracted from the
+hospital’s database.
+Statistical analysis
+All statistical analyses were performed in R software (R Core
+Team (2020). R: A language and environment for statisticalcomputing; R Foundation for Statistical Computing, Vienna,
+Austria. URL https://www.R-project.org/ ). We employed
+descriptive statistics to summarize the hospitalization charac-teristics and costs. Frequency and percentages were reported
+for categorical variables. Mean (95% conﬁdence intervals (CIs))
+or median (ﬁrst quartile ethird quartile) were reported for
+continuous variables. Changes in hospital services associated
+with COVID-19 were explored by reporting the average weekly
+numbers along with 95% CIs in a Bayesian time series model [ 17].
+7th Feb: MOH
+announces DORSCON
+Orange
+7th Apr:
+Singapore
+circuit breaker
+starts
+Circuit
+breaker Pre-COVID-19COVID-19
+Post
+circuit
+breaker6th Jun: Singapore circuit
+breaker ends
+23rd Jan: First case of COVID-
+19 reported in Singapore
+Jan 18 Jun 18 Dec 18 Jun 19 Dec 19 Jun 20 Dec 20
+Figure 1. Timeline of COVID-19 in Singapore in 2020. Based on the timeline, a total of three time periods were modelled in the time-
+series analysis: (1) pre-COVID-19 phase; (2) circuit breaker phase (encompasses the start of Disease Outbreak Response Condition
+(DORSCON) Orange and circuit breaker); and (3) post circuit breaker COVID-19 phase. The entire period from the start of DORSCON Orangeto the end of 2020 was modelled as ‘COVID-19’ period in the time-series analysis. MOH, Ministry of Health, Singapore.Y. Cai et al. / Journal of Hospital Infection 121 (2022) 1 e8 3 Four time-periods were considered in the time series, as shown
+inFigure 1 : before the DORSCON Orange status was termed pre-
+COVID-19 period, announcement of the DORSCON Orange and
+the subsequent circuit breaker was termed circuit breakerperiod, the lifting of the circuit breaker to the end of 2020 was
+termed post-circuit-breaker period, and the entire period from
+announcement of DORSCON Orange to the end of 2020 wastermed COVID-19 period. To determine the relative effect ofCOVID-19 pandemic on the reduction in hospital services in each
+time period compared with the pre-COVID-19 period, analyses
+were conducted using the ‘bsts’ and ‘CausalImpact’ packages[17]. The ‘CausalImpact’ package provides an estimate of the
+absolute and relative effect of an intervention in a targeted time
+series by analysing the difference between a forecasted coun-terfactual model and the actual model [ 17]. A two-sided P-value
+of/C200.05 was signiﬁcant.
+Results
+Actual expenditure associated with COVID-19
+The response to the pandemic incurred USD $45.39 million
+cash expenditures with USD $3.43 million (7.6%) for servicesrendered to support community COVID-19 operations and USD
+$41.96 million (92.4%) for hospital-based services. Table I is an
+itemized listing of COVID-19 related expenditures in 2020.Facilities set-up and purchase of capital assets in response to
+the pandemic was USD $21.67 million and accounted for 51.6%
+of the in-hospital expenditure. Patient-care-related suppliesand services were USD $14.72 million and accounted for 35.1%
+of the in-hospital expenditure. The largest single item category
+of expenditure incurred was medical supplies at USD $14.08million, which accounted for 33.6% of all in-hospital expendi-ture. Expenditure for labour costs comprised mainly of wages
+of newly hired staff in response to the pandemic and overtime
+wages and this was 62.2% of all in-hospital labour-related costs.
+Patients hospitalized with COVID-19
+From January to December 2020, 35,205 COVID-19 test
+swabs was performed on 19,611 patients admitted to the hos-
+pital. Of the 19,611 patients tested for COVID-19, 727 (3.7%)were positive for COVID-19. The median length of hospital stayof COVID-19 patients was eight days (6 e13 days). Of the 727
+COVID-19 patients, only three (0.4%) were admitted to the ICU
+for a median of two days (1 e5 days). The total number of
+inpatient and ICU days for COVID-19 patients in 2020 was 8009
+days and eight days, respectively. This accounted for 0.7% and
+0.02% of the hospital’s total inpatient and ICU bed-days in2020, respectively.
+Changes in hospital services associated with COVID-19
+In response to the DORSCON orange status and the sub-
+sequent implementation of circuit breaker, we observedreductions in the frequency of hospital-based services for thecircuit breaker period compared with the pre-COVID-19 period
+in 2018 and 2019. The weekly trends for the services are shown
+inFigure 2 , and a summary of the relative effects shown in
+Table II . In the circuit breaker period, the greatest reduction
+was observed for non-emergency surgeries (45%, P<0.001) andoutpatient visits (36%, P<0.001); inpatient days were reduced
+by 11% ( P<0.001). Most services resumed in the post-circuit
+breaker period, except for emergency department visits,
+which remained signiﬁcantly lower (13%, P<0.001) compared
+with the pre-COVID-19 period. When the entire COVID-19period was collectively compared with the pre-COVID-19
+period, no signiﬁcant reduction was observed in inpatient
+days (1%, P¼0.206). Non-emergency surgeries ( P<0.001) and
+outpatient visits ( P<0.001) services were both reduced by 13%
+when the entire COVID-19 period was compared with the pre-
+COVID-19 period.
+Discussion
+Cost studies in healthcare are useful to inform decisions for
+efﬁcient allocation of healthcare resources. In this study, weTable I
+Summary of COVID-19-related costs incurred by the hospital in
+2020
+Item Cost in
+millions
+(2020
+SGD)Cost in
+millions
+(2020
+USD)Percentage
+(%)
+Costs incurred in the hospital
+Facilities set-up and capital
+assets29.34 21.67 51.6
+Facilities set-up 13.9 10.27 24.5
+Large capital assets 15.02 11.09 26.4
+Minor capital assets 0.42 0.31 0.7
+Labour-related costs 4.33 3.20 7.6
+New hires and overtime
+salary2.7 1.99 4.8
+Staff support 1.5 1.11 2.6
+Other miscellaneous
+labour-related costs0.13 0.10 0.2
+Patient-care supplies and
+services19.92 14.71 35.1
+Medical supplies 19.07 14.08 33.6
+Pharmaceuticals 0.11 0.08 0.2Housekeeping 0.7 0.52 1.2
+Other patient-care
+relatedsupplies/services0.04 0.03 0.1
+Non-patient-care
+supplies and services3.23 2.39 5.7
+Security 0.65 0.48 1.1
+Transport services 0.62 0.46 1.1
+IT and communications 0.21 0.16 0.4Other non-patient-care
+related
+supplies and services1.75 1.29 3.1
+Total 56.82 41.96 100
+Costs incurred due to services rendered to external locations
+Labour-related costs 3.05 2.25 65.6
+Patient-care supplies and services 1.11 0.82 23.9Non-patient-care supplies and
+services0.49 0.36 10.5
+Total 4.65 3.43 100Y. Cai et al. / Journal of Hospital Infection 121 (2022) 1 e8 4 reported the cash expenditures, bed-days used for COVID-19
+patients and changes in healthcare services due to the
+COVID-19 pandemic in a tertiary hospital in Singapore. We
+found that a small number of COVID-19 patients were admittedto the hospital in 2020, accounting for only 0.7% of all inpatient
+bed-days. However, the actual expenditure incurred by the
+hospital was substantial, mainly due to costs in facilities set-up, capital assets and medical supplies for prevention ormanagement of COVID-19. While we did not tabulate the actual
+costs associated with lost opportunities due to missed revenue,
+we observed signiﬁcant reduction in volumes in all hospitalservices during the circuit breaker period compared with the
+pre-COVID-19 period.
+In 2003, Singapore was one of the countries most affected by
+the severe acute respiratory syndrome (SARS) outbreak [ 18].
+The experience has led local hospitals to adopt a prudent
+approach in dealing with the COVID-19 pandemic in 2020 [ 19].
+However, the stringent infection prevention measures trans-
+lated to high expenditures incurred by the hospital. Notably,
+facilities set-up for infection prevention and purchase of cap-ital assets in response to the pandemic accounted for morethan half of the COVID-19-related expenditure. Interestingly,
+labour-related costs incurred by the hospital were modest. This
+is likely attributed to the fact that opportunity costs associatedwith lost clinical time due to redeployment of staff for COVID-
+19-related processes were not included in our tabulation of
+direct hospital expenditure. In the two months before circuitbreaker was announced, clinical and non-clinical hospital staff
+were trained to manage fever screening areas and had con-
+ducted full-scale simulations as part of the hospital’s Prepar-edness and Response plan, Upon circuit breaker
+announcement, existing hospital staff were quickly redeployed
+to manage COVID-19-related processes, and were also sepa-rated into multiple teams to allow for longer shift hours and toensure business continuity should any staff be quarantined due
+to COVID-19 [ 13,20,21].
+Despite being the largest Singapore tertiary acute care
+hospital with 15% of all Singapore inpatient beds in 2019, only
+727 (1.2%) of 58,599 COVID-19 patients in Singapore in 2020
+were admitted to our study hospital. There are two reasons forsmall number of COVID-19 patients in our hospital: ﬁrstly,
+large-scale dedicated isolation units termed CCFs have been
+set up to house low-risk COVID-19 patients to prevent thenation’s healthcare infrastructure from becoming over-whelmed [ 16]. Secondly, patients who presented at primary
+care clinics fulﬁlling criteria for COVID-19 and requiring hos-
+pitalization were predominantly sent to the National Centre forInfectious Diseases, which is a 330-bedded high-level isolation
+hospital purpose built for infectious diseases and outbreak
+management. Of the 727 patients that were admitted, onlythree were admitted to the ICU during their stay. This is likely
+because almost 95% of the infected patients in Singapore in
+2020 comprised migrant workers in their 20s or 30s with little orno comorbidities, in which the likelihood of severe disease is
+markedly lower compared with elderly individuals or those
+with comorbidities [ 22]. Previous studies have estimated that
+the direct medical cost of a COVID-19 patient to range from USD$3,000 to USD $12,000 per patient in USA [ 5,23]. While we did
+not estimate the average direct medical costs of each COVID-19
+patient, we observed that the expenditure for medical suppliesand pharmaceutical products in COVID-19 prevention or man-
+agement was almost USD $15 million despite the small numberTable II
+Summary of lost opportunities associated with COVID-19
+Type of service Pre-COVID-19 Circuit breaker Post circuit-breaker COVID-19
+Average
+weekly no.
+(95% CI)Average
+weekly no.
+(95% CI)Effect size compared to
+pre-COVID-19Average
+weekly no.
+(95% CI)Effect size compared to
+pre-COVID-19Average
+weekly no.
+(95% CI)Effect size compared
+to pre-COVID-19
+Relative effect
+(95% CI)P Relative effect
+(95% CI)P Relative
+effect
+(95% CI)P
+Non-emergency
+surgeries1426
+(1377e1473)803
+(708e899)-45% (-54%, -35%) <0.001 1509
+(1406e1612)6% (-1%, 13%) 0.063 1264
+(1139e1388)-11%
+(-18%, -4%)<0.001
+Emergency
+department visits2397
+(2379e2415)2000
+(1888e2111)-16% (-19%, -14%) <0.001 2089
+(2024e2154)-13%
+(-14%, -11%)<0.001 2058
+(2002e2114)-13%
+(-15%, -12%)<0.001
+Outpatient visits 28,906
+(28,243 e29,569)18,580
+(16,779 e20,382)-36% (-43%, -29%) <0.001 28,307
+(26,833 e29,782)-2% (-7%, 4%) 0.260 24,924
+(23,147 e26,701)-13%
+(-18%, -9%)<0.001
+Inpatient bed days 13,258
+(13,048 e13,468)12,036
+(11,368 e12,704)-11% (-15%, -6%) <0.001 13,940
+(13,408 e14,472)6% (2%, 10%) 0.003 13,278
+(12,793 e13,763)1% (-2%, 5%) 0.206
+CI, conﬁdence interval.Y. Cai et al. / Journal of Hospital Infection 121 (2022) 1 e8 5 2000aNon-emergency surgeries
+1500
+1000No. of surgeries per week
+500
+2018 2019
+Year2020 2021Circuit breaker
+periodPost-circuit
+breaker period
+bEmergency department visits
+2500
+2250
+2000No. of visits per week
+1750
+2018 2019
+Year2020 2021
+cOutpatient services visits
+30000
+20000No. of visits per week
+2018 2019
+Year2020 2021
+dInpatient days
+15000
+13000
+11000No. of inpatient days per week
+2018 2019
+Year2020 2021Circuit breaker
+periodPost-circuit
+breaker period
+Circuit breaker
+periodPost-circuit
+breaker period
+Circuit breaker
+periodPost-circuit
+breaker period
+Figure 2. Actual weekly data (solid line) versus predicted (dashed line) with 95% conﬁdence interval for (a) non-emergency surgeries; (b)
+Emergency Department visits; (c) outpatient visits; and (d) inpatient bed-days. Signiﬁcant drops were observed for all services during the
+circuit breaker phase, following the Disease Outbreak Response Condition (DORSCON) Orange alert.Y. Cai et al. / Journal of Hospital Infection 121 (2022) 1 e8 6 of COVID-19 patients. We found that this was because all
+patients presenting with acute respiratory disease, including
+those without travel history or prior known contact with COVID-
+19 patients, were considered to be at risk of having COVID-19.Hence, dedicated wards, termed ARI wards, were set up to
+segregate these patients from the rest of the hospital. In these
+ARI wards, extensive infection control measures, includinginfrastructural enhancement and social distancing, risk strati-ﬁed PPE use, enhanced cleaning and sanitation, and regular
+testing for COVID-19 infection was instituted, which con-
+tributed to the COVID-19-related medical supplies expenditureincurred by the hospital [ 7].We consider our costs estimates to
+be conservative as we did not include costs that were not a
+direct part of the infection control measures. For instance,costs associated with the implementation of services to provide
+alternative methods of care, such as remote counselling and
+teleconsultation clinics during the circuit breaker phase wereexcluded from our cost estimates.
+Previous studies have suggested that the monetary losses of
+clinical and surgical revenues due to reduction in hospitalservices are likely to eclipse the direct ﬁnancial expenditures inan outbreak [ 6,10,24]. Mulholland et al. described overall sharp
+drops in emergency department, inpatient admissions, and
+surgical admissions in Scotland hospitals following the WHOCOVID-19 pandemic announcement and the consequent UK
+lockdown [ 8]. In our study, we similarly observed reductions in
+all hospital services following the declaration of the DORSCONorange status and subsequent circuit breaker. Notably, approx-
+imately one-third of all outpatient services and almost half of
+non-emergency surgeries were cancelled during the circuitbreaker period, which may result in lost clinical revenue. How-
+ever, this loss is likely to be low considering that most of hos-
+pital’s revenue is derived from annual block funding from thegovernment, which is not directly affected by patient volume[11]. Most services rallied after the circuit breaker was lifted
+likely due to pent-up demand; hence, the onset of COVID-19 in
+2020 resulted in approximately only 10% reduction in servicescompared with the pre-COVID-19 period. Despite this, it should
+be noted that to allow business continuity during the COVID-19
+pandemic, hospitals can incur higher costs in service provisiondue to the need for additional infection prevention measures
+such as increased COVID-19 testing, more stringent use of PPEs,
+and reduced visits for social distancing [ 14].
+Our study has limitations. We did not quantify the costs
+associated with lost revenue due to the lack of data informing
+the clinical revenue associated with each service. However, we
+postulated that this loss in revenue is likely to be modestconsidering the minimal reduction in overall service provision
+by the hospital in 2020 and the funding mechanism of the
+hospital. Another limitation is that our ﬁndings may be lessgeneralizable for other healthcare systems in other countries
+with different policy responses against COVID-19, or for
+healthcare systems with different payment structures. Never-theless, we believe that our ﬁndings are valuable in informing
+local healthcare administrators and decision makers in sub-
+sequent responses in future pandemics. Our study also did notconsider the wider socio-economic impact of COVID-19,including its impact on healthcare workers’ well-being and
+productivity. In a survey by Tan et al. , it was reported that
+burnout and disengagement was observed in three-quarters ofsurveyed healthcare workers during the COVID-19 pandemic
+[25]. The efﬁcacy and cost-effectiveness of methods to supportthe mental well-being of healthcare workers, such as mobile
+health apps, may be of interest in future studies [ 26]. Finally,
+continued analysis of the hospital costs will be warranted, as
+cost structures will change when hospitals evolve from thetraditional face-to-face patient ephysician care model to novel
+models of remote consultations, such as the use of artiﬁcial
+intelligence or machine learning for automated clinical diag-nosis and home-based monitoring [ 27].
+In conclusion, in our study, we found that the prevention
+and management of the COVID-19 pandemic is associated with
+high ﬁnancial expenditure to Singapore hospitals. Whilehealthcare services were disrupted during lockdown, these
+services quickly rallied after the lockdown was lifted. Given
+that we are still in the midst of the COVID-19 pandemic, it isuncertain how subsequent waves of infection or changes in
+vaccination rates may impact hospital responses and costs.
+Understanding the key costs in the response to the COVID-19pandemic can enable us to make better-informed decisions
+as we prepare to respond to future epidemics.
+ ",sciencedirect,Healthcare,Singapore
+1,The healthcare system in Singapore," 
+ 
+1 
+ 
+The health care system in Singapore  
+M Ramesh and Azad Singh Bali  
+ 
+Singapore has a compelling health policy story. In a nutshell, the population enjoys excellent health 
+status while public and total expenditures on healthcare remain low .  Its achievements look all the more 
+remarkable in comparison to its high income peers in OECD, as shown in the following table :  
+ 
+Table 1. Health e xpenditures and health outcomes   
+High income 
+OECD  Singapore  
+Total health expenditure (% of GDP)  12.6 4.6 
+Public health expenditure (% of total health expenditure)  61.4 39.8 
+Life expectancy at birth, total (years)  80.7 82.3 
+Mortality rate, under -5 (per 1,000)  5.1 2.8 
+Source: World Bank (2016).   
+ 
+ 
+  
+ 
+2 
+ 
+International benchmarking lend further credence to Singapore’s fine record . The Economist 
+Intelligence Unit (2014) ranks its health system the second best (after Japan) out of 166 in the world. 
+Similarly, the Bloomberg Health- Care Efficiency Index  2017 ranks it second best among 55 countries .  
+Like all good stories, there are vill ains and heroes in the Singapore story: market competition 
+and medical savings account  are the heroes  that fight off the evils of information asymmetry 
+and moral hazards that are the bane of healthcare  systems. The remarkable headline  numbers 
+and the accompanying narrative have attracted widespread admiration  from commentators 
+around the world in recent years  (For example, see Callick 2008; Haseltine, 2013; Gobry 2014; 
+Doutthat 2017] .  
+Alas, if only healthcare  policy were so simple. The reality is mess y and there is no magic bullet. 
+Singapore’s suc cess in healthcare is built on a panoply of measures developed and refined over 
+decades. The measures employ a variety of policy tools that both individually and collectively 
+target the market and government failures afflict the healthcare sector.  For a comprehensive 
+understanding of health policy in Singapore, we need to understand all the policy tools used and how they operate individually and in relation to each other .  
+For start ers, the Singapore government intervenes heavily and comprehensively in the health 
+sector, especially after the unsatisfactory experience with corporatisation , deregulation and 
+marketi sation of the sector in the mid -1980s which saw massive rise in costs and public disquiet 
+(Ramesh, 2008A). The 1993 White Paper, which critically reviewed the 1980s reforms, bluntly noted: “Market forces alone will not suffice to hold down medical costs to the minimum…. In healthcare, s upply tends to create its own demand, thus raising healthcare expenditure. The 
+Government therefore needs to intervene to prevent an oversupply of services, to dampen unnecessary demand and ultimately, to control costs” (Government of Singapore, 1993). The  
+report particularly emphasi sed the need to regulate fees charged by providers and control the 
+supply of hospital beds and physicians. It also boldly addressed the delicate issue of rationing demand: “We cannot avoid rationing medical care, implicitly or e xplicitly …. To get the most 
+from the limited health budget, we need to exclude treatments which are not sufficiently cost effective to belong to the basic health package available to all.” (Government of Singapore, 
+1993, p. 24). In the following years, the government refined its health policy interventions that 
+involved vast expansion in the range of tools it employed to manage the sector. The underlying trend in the choice of tools was their focus on addressing specific governance problems rather 
+than promoting the role of the market or the state.  
+The policy tools currently used to manage the healthcare  sector in Singapore are summarised 
+in Figure 1. The tools include a variety of regulatory, organi sational, fiscal, and information 
+tools with the Ministry of Health (MOH) at the helm. Collectively, they form a 
+counterweighing system of incentives and disincentives that encourage the key stakeholders to pursue cost -effectiveness, make prudent economic decisions without compromising the overall 
+policy goals of  providing necessary healthcare to all at affordable costs.  
+ 
+ 
+   
+ 
+3 
+ 
+Figure 1. Policy Tools in Singapore’s Healthcare System  
+Organi sation  
+• Public ownership of Hospitals  
+• Active Management of Hospitals  
+• Competition among hospitals  Fiscal  
+• Subsidy to Public Hospitals  
+• Medisave, Medifund, and 
+Medishield  
+• Out-of-pocket payments  
+ 
+Regulation  
+• Close monitoring of all significant 
+aspects of providers’ operations  
+• Active regulation of providers   
+Information  
+• Publishing prices, bill sizes, and clinical outcomes  
+• Public Campaigns  
+ 
+Organi sational Tools  
+A distinct feature of Singapore’s health system is the overwhelming dominance of the 
+government in hospital ownership, with public hospitals accounting for more than four -fifths 
+of all hospital beds in the country.  
+Similar to many other countries, Singapore began reforming its public hospitals in the mid -
+1980s in the face of mounting public expenditures on health. Pursuing cost reduction through enhanced efficiency, the reforms promoted competition among hospitals and operational autonomy for managers. Competition was also intended to promote customer -focus, as public 
+hospitals were viewed unfavourably by users.  
+The award of autonomy to public hospitals and competition among them did indeed improve service quality an d cleared surgery backlogs but it also increased costs and reduced 
+affordability (Ramesh, 2008A). The adverse trends led the government in the 1990s to intervene in all significant aspects of hospitals’ operations, their autonomy notwithstanding: 
+the types  and volume of speciali sed clinical services they provide, the fees they charge, the 
+salaries they pay, and the expensive equipment they purchase. It also tweaked the formula by 
+which it paid hospitals, to ensure that hospitals did not under - or over -suppl y services.  
+In 1999, the government established two similarly sized “clusters” of vertically integrated 
+public hospitals and clinics. The reorgani sation was intended to promote econom ies of scale, 
+effective coordination and planning of resources, better integration of inpatient and outpatient facilities, and a more effective patient referral system within each cluster. Notwithstanding 
+government ownership, each public hospital is a legall y autonomous entity registered as a 
+private firm. Legally, they enjoy operational autonomy in all areas, including recruitment, remuneration, purchase, and pricing of services. They also have substantial revenues and surplus from treating patients in non- subsidi sed wards which reinforces their autonomy. Yet 
+the fact that the government remains the owner means that it can control and direct them, if necessary, in ways not possible if they were truly private firms. Inspired by the success of two Government    
+ 
+4 
+ 
+competing clu sters, and seeking to further enhance competition, in 2015 all public hospitals 
+and associated polyclinics were reorgani sed as 6 regional clusters spread across the island.  
+“Public ownership of what are legally private firms allows hospitals the autonomy they need to operate 
+in a competitive environment and yet be within the government’s direct reach.”  
+Public ownership of what are legally private firms allows hospitals the autonomy they need to 
+operate in a competitive environment and  yet be within the government’s direct reach (Ramesh, 
+2008B). It provides the government a channel for receiving market feedback and a tool for controlling hospitals’ behaviour. As an owner, the government can shape hospitals’ behaviour without having to resort to onerous regul ations or purchase negotiations that would be 
+necessary if they were truly private firms. This has been particularly useful for controlling user charges, physicians’ remunerations, and the number of hospital beds in different ward classes, 
+for instance . 
+ 
+Fiscal tools  
+Tax financing for healthcare  in Singapore consists of two components: transfers to public 
+hospitals to subsidise the costs of care for patients who do not pay the full costs of treatment, 
+and tax exemptions for Medisave contributions (Tan et al  2014). Such transfers account for 25 
+per cent of total health expenditure and 70 per cent of the government’s health expenditure (Ramesh 2008A). The government pays public hospitals on the basis of case -mix (diagnosis -
+related groups or DRGs) as well as bl ock grants. In the 1990s when the formula for grants was 
+changed from block grants based largely on historical figures to fee -for-service, hospitals 
+predictably increased the quantity of services they provided. As a result, in 1999 the government introduce d case- mix funding to create incentives for hospitals to make better use 
+of resources. To prevent under -servicing – a problem innate to case- mix because providers are 
+paid a fixed amount per case regardless of the services they provide – the government 
+subsequently moved to a hybrid system, comprising both block funding and case -mix payment 
+(Khaw 2005).  
+In addition to subsidies at public hospitals, there are many ad- hoc tax -financed schemes. 
+Community Health Assistant Schemes , for instance, is a income -tested scheme that offers 
+additional grants to low -income household for outpatient treatment. Similarly, Pioneer 
+Generation Package  subsidises insurance premiums as well as reduces co -payments for elderly 
+Singaporeans. There are  also public health campaigns fully financed by the government.  
+In 1984, Singapore established Medisave, which was then considered an unconventional financing scheme based on compulsory savings. The government’s objective in launching the scheme was to encourage individual responsibility for healthcare, while reducing the government’s fiscal responsibility (Taylor and Blair, 2003). After an episode of hospitalisation, the patient is issued with an itemised bill which can be settled directly from balances in  an 
+individual’s Medisave account, subject to a co- payment of 20 percent paid out of pocket  
+(OOP) , in addition to daily and annual limits on withdrawal. The mandatory nature of Medisave 
+and restrictions on what it can be used for has resulted in relatively  large accumulated balances: 
+total Medisave balances amounted to S$70 billion or equivalent 18 percent of GDP in 2015. However, after more than three decades of operation and a comparatively high contribution   
+ 
+5 
+ 
+rate, Medisave forms less than 10 percent of total healthcare spending (Government of 
+Singapore, 2015).  
+Medishield, introduced in 1990 and replaced by Medishield Life in 2015, is a low -cost and 
+basic health insurance scheme for catastrophic hospital costs. It was introduced after the 
+realisation that Medisave was insufficient to pay large hospital bills. It is a voluntary scheme 
+(with an opt -out provision) intended to cover those up to the age of 92 years, though new 
+enrolment is not allowed after the age of 75 years. The premiums vary by age and are s ubsidised 
+based on the income. Thus, the annual premium for Medishield, for example, ranges from $50 for those under the age of 20 years to $1,190 for those between the age of 84 and 85. For patients seeking more generous cover or treatment in upper class hospital wards, additional cover may be purchased from authorised private insurance schemes. The premium for Medishield can be paid from Medisave accounts. There are high deductibles ($1,000 per year for a Class C ward and $1,500 for other wards) and co- insurance requirements (10–20% of the 
+hospital bill). In March 2015, Medishield covered 3.6 million individuals and spending through formed less than 5 percent of total healthcare spending.  
+Medifund was established as a means -tested scheme in 1993 to fill the gaps left by Medisave 
+and Medishield. In the absence of risk pooling and cross -subsidi sation, those with low life -time 
+incomes or the poor accumulate lower balances in their Medisave account, which in turn determines their access to medical services. Medifund caters to those who do not have the means to pay for their health bills from OOP or Medisave or Medishield. However, Medifund accounts for a negligible share of total healthcare expenditure as the means test is onerous. In 
+2014, S$133 million were distributed amongst 766,000 applicants, an average of about S$170 
+per applicant.  
+OOP payments are large in Singapore, and is an outcome of deliberate policy design. There is almost no entirely free healthcare in Singapore: everyone is expected to pay all or part of the 
+costs, including hospital care. Outpatient care, including at the polyclinics, is funded largely OOP . The adverse effects of OOP are mitigated by lower prices at government owned and 
+operated polyclinics due to economies of scale and cost -cutting management practices. The 
+lower prices at government clinics have the flow -on effect of driving down prices at private 
+clinics to whom they pose latent competition.  
+ 
+Regulatory tools  
+A key feature of Singapore’s healthcare system is the tight control over access to services. To 
+achieve this, policymakers rely on both demand-  and supply -side controls to encourage patients 
+and providers to be judicious and cost conscious in their use of healthcare services. For 
+instance, Medishield covers hospitalisation only in basic hospital wards, and prices increase 
+steeply if patients seek treatment in higher class wards, as subsides decline with the ward class, being zero for the highest (i.e. the most comfor table) Class A ward. Similarly, access to 
+advanced tertiary care or diagnostic tests is rationed by waiting times if treatment is to be reimbursed by Medisave and Medishield. While patients have immediate access to tertiary hospitals and specialists, they do not receive subsidised prices in the absence of referrals. 
+Restrictions on the use of Medisave as well as ceilings on the maximum amount that providers   
+ 
+6 
+ 
+can be paid from an individuals Medisave account reduce the malfeasance associated with 
+moral hazard.  The MOH  is known to closely monitor billing practices of hospitals and raises 
+alarms when it observes anomalies or suspected excessive treatment.  
+Singapore Medical Council, a statutory board under the MOH regulates and licenses healthcare  
+providers in Si ngapore. The Council plays an active role in ensuring that costs are 
+‘competitively priced’ and in the stewardship of the sector. There have been instances where 
+the Council has censured providers for ‘over -charging’ patients (Straits Times, 2015). Such 
+controls on provider behaviour reduce their monopoly power in the health sector, and reduce 
+room to engage in maleficent behaviour.  
+ 
+Government encouraged hospital clusters to harmonise their financial, clinical, administ rative and diagnostic processes 
+through integrated information systems.  
+ 
+Information tools  
+To take advantage of modern information technologies available for hospital management, the 
+government has encouraged hospital clusters to harmoni se their financial, clinical, 
+administrative and di agnostic processes through integrated information systems. All 16 public 
+hospitals use the enterprise software, National Electronic Health Records. However, private hospitals, and more significantly, private clinics continue to resist sharing information w ith 
+other providers.  
+  
+ 
+7 
+ 
+An innovative measure the government has employed to improve service quality and lower 
+prices is to acquire and disseminate information on hospital charges and clinical outcomes. As the Minister of Health put it: “For economics and mar kets to work, we must make sure that the 
+conditions for market competition exist. That is why I published the bill sizes for the common medical treatments…. When competition is brought to bear on these services, we will then have the right incentives for t he healthcare providers to do the right thing, to raise standards 
+even as they reduce cost” (Khaw, 2005). Since 2003, public hospitals have been required to publish their average bill sizes (which includes charges for room, treatment, surgery, laboratory test, etc.) for different common conditions and procedures. The collated data is subsequently 
+published on the M OH’s webpage
+. Information on the occupancy rates of hospital beds is 
+updated on a weekly basis. Similarly, the Ministry also publishes the distribution of bills  across 
+public hospitals for major illnesses . The hospital managers wer e understandably resistant to 
+disclosing information on their charges and clinical outcomes but the government eventually prevailed over them. Private hospitals were more successful at resisting participation, but many 
+eventually complied due to pressures from the government and users.  
+Given the volume of data collected over the years, the M OH now maintains online calculators, 
+which are synchronised with Medisave and Medishield limits. Patients may visit the website 
+and estimate the cost of treatment of particular episodes of illness and calculate the share of the bill that may be financed by Medisave and Medishield. Importantly, they can make informed choices on the particular hospital and ward class  when  they seek treatment, based on their 
+knowledge of average costs and clinical outcomes. The flow of information promoted by 
+government measures mitigates users’ information disadvantage vis -à-vis providers.  
+ 
+Concluding observations  
+The first conclusion to emerge from the discussion above is that Singapore’s healthcare achievements 
+are not the result of some magic bullet, Medisave or otherwise. Medisave forms less than a tenth of the 
+country’s total health spending which would make it, prima facie, an unlikely determinant of the 
+system’s outcomes. For a fuller understanding, we need to understand the entire range of policy 
+measures that the government employs and how they target the various failures that afflict the sector.  
+Furthermore , the case of Singapore shows that policy tools are more effecti ve when used 
+simultaneously and in concert . A concerted use of different tools promote complementarities 
+that are unavailable when they are used in isolation. Take the case of publicly owned and 
+operated hospitals, a typical organi sational tool. Instead of  running them in traditional 
+command -and-control ways, the Singapore government uses its ownership rights to force them 
+to compete with each other and with private hospitals for users’ funds  with the objective of 
+promoting customer focus and operational ef ficiency on their part . Its ownership also makes it 
+easier for the government to force them to disclose information on costs and clinical outcomes, a requirement vehemently resisted by private hospitals but essential if users are to make informed decisions . Here we see an ingenious combination of public ownership, market 
+competition, and price transparency to achieve different but related objectives. Public ownership also allows the Ministry to directly acquire operational information from public hospitals and respond with appropriate directives as necessary. This is particularly relevant in 
+healthcare as the governance failures are multi -faceted and deeply intertwined and, hence,   
+ 
+8 
+ 
+cannot be addressed in isolation, as policy reformers in many countries have found out (Liang 
+and Langenbrunner, 2013; Ramesh 2013; Bali and Ramesh, 2015b; Harimurti et al 2013).  
+ 
+ 
+ ",nus,Healthcare,Singapore
+2,The political economy of health financing reform in Malaysia,"The political economy of health financing
+reform in Malaysia
+Kevin Croke1,*, Mariana Binti Mohd Yusoff2, Zalilah Abdullah3,
+Ainul Nadziha Mohd Hanafiah3, Khairiah Mokhtaruddin4,
+Emira Soleha Ramli4, Nor Filzatun Borhan5, Yadira Almodovar-Diaz1,
+Rifat Atun1and Amrit Kaur Virk1
+1Department of Global Health and Population, Harvard T.H. Chan School of Public Health, 677 Huntington Ave,
+Boston, MA 02115, USA,2Planning Division, Ministry of Health, Block E6, Parcel E, Federal Government
+Administration Centre, 62590, Putrajaya Malaysia,3Institute for Health System Research, Ministry of Health, Blok
+B2, Kompleks Institut Kesihatan Negara (NIH) No.1, Jalan Setia Murni U13/52, Seksyen U13 Setia Alam, Shah
+Alam, Selangor 40170, Malaysia,4Razak School of Government, Menara Prisma, Level 5, 26, Persiaran Perdana,
+Presint 3, Putrajaya 62675, Malaysia and5Institute for Health Management, Ministry of Health Malaysia, Blok B1,
+Kompleks NIH, Jalan Setia Murni U13/52, Seksyen U13, Setia Alam 40170 Shah Alam, Malaysia
+*Corresponding author. Department of Global Health and Population, Harvard T.H. Chan School of Public Health, 677
+Huntington Ave, Boston, MA 02115, USA. E-mail kcroke@hsph.harvard.edu
+Accepted on 20 August 2019
+Abstract
+There is growing evidence that political economy factors are central to whether or not proposed
+health ﬁnancing reforms are adopted, but there is little consensus about which political and institu-
+tional factors determine the fate of reform proposals. One set of scholars see the relative strengthof interest groups in favour of and opposed to reform as the determining factor. An alternative lit-
+erature identiﬁes aspects of a country’s political institutions–speciﬁcally the number and strength
+of formal ‘veto gates’ in the political decision-making process—as a key predictor of reform’s pros-pects. A third group of scholars highlight path dependence and ‘policy feedback’ effects, stressing
+that the sequence in which health policies are implemented determines the set of feasible reform
+paths, since successive policy regimes bring into existence patterns of public opinion and interestgroup mobilization which can lock in the status quo. We examine these theories in the context of
+Malaysia, a successful health system which has experienced several instances of proposed, but ul-
+timately blocked, health ﬁnancing reforms. We argue that policy feedback effects on public opinionwere the most important factor inhibiting changes to Malaysia’s health ﬁnancing system. Interest
+group opposition was a closely related factor; this opposition was particularly powerful because
+political leaders perceived that it had strong public support. Institutional veto gates, by contrast,played a minimal role in preventing health ﬁnancing reform in Malaysia. Malaysia’s dramatic early
+success at achieving near-universal access to public sector healthcare at low cost created public
+opinion resistant to any change which could threaten the status quo. We conclude by analysing theimplications of these dynamics for future attempts at health ﬁnancing reform in Malaysia.
+Keywords: Health reform, Malaysia, political economy, stakeholder analysis, historical institutionalism
+Introduction
+Why has comprehensive health financing reform failed to be
+adopted in Malaysia, despite its frequent presence on the health pol-icy agenda, and despite support from the country’s politicalleadership since the mid-1980s? On a number of occasions over the
+past 30 years, Malaysian policymakers have attempted to transformtheir existing hybrid system, in which tax-funded, publicly providedcare coexists with largely out-of-pocket financed private care, into a
+VCThe Author(s) 2019. Published by Oxford University Press in association with The London School of Hygiene and Tropical Medicine.
+This is an Open Access article distributed under the terms of the Creative Commons Attribution Non-Commercial License (http://creativecommons.or g/licenses/by-nc/4.0/),
+which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited. For commercial re -use, please contact
+journals.permissions@oup.com 732Health Policy and Planning , 34, 2019, 732–739
+doi: 10.1093/heapol/czz089
+Advance Access Publication Date: 28 September 2019
+Original ArticleDownloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ unified insurance-based system. On each occasion, the proposal was
+defeated, despite the fact that a number of powerful groups andactors in Malaysian politics favoured health financing reform, andthe Malaysian political system has virtually no formal institutionalbarriers (veto gates) to policies advocated by the ruling coalition(Tsebelis, 2002 ).
+Some analysts understand health system reform as a contest
+among interest groups, in which reform will proceed if it gains thesupport of cohesive and mobilized politically powerful groups. Thiscannot explain the Malaysian case, since healthcare reform had sup-port from the most powerful institution in Malaysian politics at thetime, namely the then-ruling United Malays National Organization(UMNO) party, and its successive Prime Ministers (PMs). It alsohad support from other economically important groups such as pri-vate sector health providers and various large government-linkedcorporations (GLCs). It was opposed by weaker groups includingNGOs, academics, opposition parties and doctors’ professionalassociations. While interest group opposition to blocked financingreform has been part of the story in Malaysia, it does not appear tohave been decisive. Other influential work on the political economyof health reform identifies the number of veto gates in the policyprocess as a fundamental determinant of the success or failure ofhealth reform ( Immergut, 1992 ;Steinmo and Watts, 1995 ;Sparkes
+et al. , 2015 ). In contrast, we show that this cannot explain the fail-
+ure of comprehensive healthcare reforms in Malaysia since there areessentially no formal veto gates in its political system that restrainelected majorities from passing their preferred legislation.
+Stakeholder interviews for this project highlighted a different fac-
+tor: political leaders’ perception of public opinion was a major barrierto reform, specifically because of the sequence in which health cover-
+age had been rolled out ( Fox and Reich, 2015 ). Interviewees stressed
+that while interest group opposition was an important factor, the fun-damental constraint on reform was public support for the existingsystem of health finance. Interviewees argued that because theMalaysian public already enjoyed near-universal access to publiclyprovided healthcare at modest cost, Malaysians viewed reformattempts primarily as a threat. This feeling was perceived to be broad-ly shared among the population but was perhaps most salient for thegroup at the heart of the then-ruling party’s electoral coalition, therural ethnic Malay population. Thus while the government had longwanted to transform the health finance system, and had the electoralmajorities necessary to do so, it stepped back from doing so each timein the face of citizen group mobilization and hostile public opinion.This is what Pierson (1993) describes as a ‘policy feedback’ effect,
+since this public opinion was perceived to result from Malaysia’searlier health policy achievements, most notably the provision of
+healthcare access to the public at very low out-of-pocket cost, includ-ing to the rural poor. While health policymakers worried about thesustainability of this system, they did not manage to convince thepublic at large that reforms would preserve low cost, progressivelyfinanced access to healthcare, and political leaders were therefore un-willing to move forward with reforms. The situation in Malaysiashows strong resemblance to the politics of welfare state retrenchmentin the USA and Europe, which Pierson (1996) argues is characterized
+by strong public support for and interest group mobilization behindthe healthcare status quo, loss aversion as the public contemplates re-form, and general inertia in political institutions.
+The reasons why Malaysia did not adopt health financing
+reforms which would transition the country toward a social healthinsurance (SHI) system are of broader interest, since there has beenglobal momentum in developing countries away from governmentfinancing and provision and towards SHI systems (Wagstaff, 2010).Malaysia’s resistance to these reform proposals can shed light on thepolitical economy dynamics of similar reforms in other settings.
+Methods
+In order to understand the views of health system participants onthe politics of Malaysia’s health reform efforts, we conducted an in-depth stakeholder analysis using semi-structured interviews with>40 stakeholders with interest in or influence over health system re-
+form ( Reich, 1996 ). We defined stakeholders as ‘actors who have an
+interest in the issue under consideration, who are affected by theissue, or who—because of their position—have or could have an ac-tive or passive influence on the decision making and implementationprocesses’ ( Brugha and Varvasovszky, 2000 ). We developed a pre-
+liminary list of potential stakeholders, and refined it in consultationwith counterparts in the Ministry of Health (MOH) and academia.These stakeholders included current and former officials at key gov-ernment ministries as well as healthcare providers (public and pri-vate sector physicians and hospital managers), educational andaccreditation bodies, NGOs, international organizations, businessleaders and researchers. We then analysed the interview transcriptsand other primary source documents to identify each stakeholder’srelative power, position on both past and proposed future healthreforms, the intensity of their commitment and their degree of mo-bilization around health reform ( Roberts et al., 2008 ).
+Second, in addition to this primary data collection via interviews,
+we analysed the secondary literature on Malaysia’s health reform
+efforts. Third, we analysed the comparative politics literature on theKey Messages
+•This study examined efforts at health ﬁnancing reform in Malaysia over 35 years, seeking to identify why health ﬁnanc-
+ing reforms were continuously proposed by the government but consistently blocked by opponents.
+•Data were gathered through more than 40 interviews with health sector stakeholders in Malaysia, as well as otherinformants knowledgeable about policy and political dynamics.
+•We examined the relative explanatory power of theories of interest group competition, veto points and historical institu-tionalism/path dependency.
+•We found that the historical institutionalist approach best explains Malaysia’s persistently blocked reforms, while inter-est groups mobilization played an important secondary role. There was a clear path dependency to the process: previ-ous expansions of subsidized health services had created public opinion very resistant to ﬁnancing changes.
+•Stakeholders argue that Malaysian policymakers observed public backlash to reform proposals, feared political conse-quences and thus refrained from implementing their preferred reforms.Health Policy and Planning , 2019, Vol. 34, No. 10 733Downloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ Malaysian state and Malaysia’s political economy. Finally, we
+assessed the extent to which the mechanisms and processes identi-fied by interviewees and in the secondary literature were consistentwith theories of interest group competition, veto gates or path de-pendency, and the relative contribution of each of these theories.
+Theoretical framework
+There is no single generally accepted theory which is universallyused to explain variation in health system reform outcomes, but ra-
+ther a set of theories, which span several academic disciplines
+(Roberts et al., 2008 ). Accordingly, this analysis examines the extent
+to which several of the most prominent of these theoretical frame-works can explain the success or failure of health financing reformin Malaysia: interest group theory, veto gates theory and historicalinstitutionalist theory, with a focus on mechanisms of pathdependency.
+Interest group-centred theory focuses on the ability of powerful
+groups (such as business interests, economic elites or medical pro-viders) to block health reforms which go against their interests.Healthcare reforms create winners and losers, which can result in in-tense mobilization and lobbying for or against reform proposals bygroups in society ( Kauffman and Nelson, 2004 ). According to theo-
+ries of interest group competition, policymaking is a contest amongvarious interested parties, with reforms most likely to progress if thecoalition of groups mobilized in favour of change is stronger andmore unified than the coalition blocking reform, and vice-versa.Roberts et al. (2008 , pp. 70–71) highlight the importance of analy-
+sing the relative power, position and level of mobilization of interestgroups outside of government, as well as ministries and actors insidethe government.
+A second set of theories on the determinants of healthcare reform
+relate to the institutional features of a country’s political system,namely the number of veto gates ( Immergut, 1992 ;Tsebelis, 2002 ).
+Any person or group with the power to block policy change can beunderstood as a veto gate, which means that in political systems withmany veto gates, many actors have a legal ability to block or seriouslyimpede major reforms proposed by the executive, including minorityparties in the legislature, courts and state governments. (For example,the proliferation of veto gates in US political institutions is often usedto explain the repeated failure of legislation to ensure universal healthcoverage; see Steinmo and Watts, 1995 .) In systems with fewer veto
+gates (such as Great Britain), parliamentary majorities face few insti-
+tutional impediments to passing legislation.
+Finally, we draw on the historical institutionalist tradition in polit-
+ical science, particularly the concepts of path dependency and policyfeedback. Path dependency in this context refers to the idea that theset of feasible policy options at any point in time is shaped by the pol-icy choices of the past, including the institutional arrangements andconfigurations of public opinion generated by these past choices(Pierson, 1996 ). As in interest group theory, the relative power of
+institutions and interest groups matters, but historical institutionalisttheories stress that interest groups do not emerge organically from so-ciety. Rather, the ways in which various groups are mobilized to pro-mote or defend certain policy options, and the views of the publicabout these options, are often a function of the policies that havebeen previously enacted. Pierson (1993) describes as ‘policy feedback’
+the idea that policies create public opinion, which then constrains fu-ture policies. Successful policies mobilize interest groups and shapepublic opinion in their own defense, and can imbue systems with adegree of stability that might not be predicted simply by assessing the
+relative power of groups more broadly, or the legal hurdles to reform.
+Major health system reform initiatives in Malaysia
+The central thrust of health policy in Malaysia from independence in1957 through the early 1980s was the expansion of essential healthservices to the entire population, particularly the rural poor. Malaysiawas very successful at this task, achieving broad access to primaryhealthcare, and rapid reductions of under-5 and maternal mortality(Pathmanathan et al.,2 0 0 3 ), at relatively modest cost, and while pro-
+viding substantial financial protection, especially for the poor
+(Rannan-Eliya et al. ,2 0 1 6 ). Initial impetus towards health financing
+reform in Malaysia came about in 1983, when PM MahathirMohamad announced a new economic direction for Malaysia basedon a renewed focus on private sector growth. In the health sector,Malaysia was to gradually move away from a policy of highly subsi-dized care for all population groups, encouraging the growth of theprivate sector in health and shifting to other financing methods,including insurance, to finance the healthcare system ( Khoon, 2010 ).
+In 1985, the government commissioned the first of a number of stud-ies proposing the transition to an insurance-based system. In line withthis vision, and encouraged by senior Malaysian policymakers, theprivate health sector grew rapidly—the number of private hospitalsquadrupled from 1980 to 2000, from 50 to 224 ( Chee and
+Barraclough, 2007 ), and the private, out-of-pocket share of national
+health expenditure grew steadily. In the 1990s, there were a series ofincremental reforms in this direction, such as the corporatization ofHospital Kuala Lumpur’s cardiac unit into the National HeartInstitute in 1992, followed by contracting out Malaysia’s drug distri-bution system to private companies in 1994, and in 1996, outsourcingof hospital support services to private suppliers. Despite these incre-mental changes, the Mahathir-led government refrained from enforc-ing fundamental systemic restructuring of the health financingsystem. Nevertheless, this vision of reform continued to be proposedin a series of government-commissioned analyses of the health systemthroughout the 1980s and 1990s ( Juni, 2014 ).
+As a result, comprehensive financing reform remained on the
+agenda. In 1999, the government’s declaration of its intent to cor-poratize public hospitals, to enable them to function along commer-cial lines, was a key tipping point in the politics of reform. A vocaland well-organized opposition to this reform emerged: the Citizen’sHealth Initiative coalition, organized by non-governmental actorsand activists and academics from the Malaysia Medical Association,University Sains Malaysia and the Consumer Association of Penang
+(Leng and Hong, 2015 ). With elections approaching, the govern-
+ment backed off of its corporatization proposal, and even increasedfunding for public hospitals ( Kuhonta, 2011 ).
+After this setback, comprehensive healthcare reforms stayed off
+the Barisan National-led government’s agenda until the late 2000s,when the MOH began to develop the ‘1Care’ plan. This plan out-lined major transformation in the healthcare financing system, againstressing the introduction of an insurance-based model. ‘1Care’ended up being ‘arguably ...the most contentious issue in health in
+Malaysian society spanning three decades’ ( Leng and Hong, 2015 ).
+The substance and rationale for the reform appears to have shiftedfrom a focus on the need to limit public spending on health(Barraclough, 2000 ), which was central to PM Mahathir’s justifica-
+tion for earlier reform proposals, to a desire to pool public and pri-vate health spending and thus improve the efficiency of healthspending. Yet the 1Care proposals still broadly reflected a shift to aninsurance-based system, and inspired opposition from a coalition734 Health Policy and Planning , 2019, Vol. 34, No. 10Downloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ similar to the one that opposed the earlier corporatization effort. An
+early draft of the plan was leaked to the media by opponents, and asocial media campaign against the plan ensued. Between Februaryand June 2012, the ‘TakNak 1Care’ (‘Do not want 1Care’) move-ment emerged, with a highly visible online presence to mobilize op-position to the plan. Again eager to avoid vocal opposition beforethe impending 2013 national elections, the government once againshelved its plans to transform the health financing system.
+Thus, the basic pattern of healthcare reforms in Malaysia from
+the early 1980s until the present day is that Malaysia’s powerful pol-itical leadership favoured dramatic healthcare financing and deliveryreforms, yet each attempt was comprehensively blocked by civil so-ciety mobilization—which the government believe had strong rootsin public opinion—and systematic reforms were never fully imple-mented. In the following sections, we consider competing explana-tions for this.
+Results: stakeholder analysis
+We conducted a stakeholder analysis analysing the positions, inter-ests, power and influence of relevant actors within the Malaysiansystem and their positions on health system reform. Our sample
+included representatives from the Malaysian government, quasi-
+governmental corporations, professional and accreditation associa-tions, political parties, civil society (NGOs, academia, think-tanks),as well as public and private healthcare providers in Malaysia. Weanalyse their positions on key past reform attempts, the reason forthese positions and the degree to which their opposition was per-ceived as decisive in preventing the implementation of these reforms.
+Supporters of reform
+Our interviews highlighted three groups that supported health systemreform in Malaysia during key episodes of attempted reform from themid-1980s to the current day: senior policymakers in UMNO andtechnocrats in key policy planning agencies such as the EconomicPlanning Unit (EPU), senior leaders in the MOH, and large privatesector and quasi-government corporate entities either active in thehealth sector or interested in investing in the sector. High-level polit-ical support in the early 1980s originated with the political leadershipof the ruling Barisan Nasional coalition, led by the UMNO party,principally the PM’s Office, and the technocrats in the EPU. Themotivation of these state actors came from various sources. PMMahathir was motivated by an ideological and policy vision for areduced state role in healthcare financing and delivery, a larger pri-vate role and an eventual transition to a partially privatized,insurance-based system. Other political actors may have been morefocused on SHI benefits for specific constituencies, such as Malaysia’slarge and politically important civil service. In the MOH, intervieweesnoted persistent internal divisions about the precise form of reform,with some stakeholders believing that problems could be solved withincreases in the budget, rather than comprehensive reform. Otherstakeholders noted that while the policy side of the ministry was in fa-vour of financing reform, the administrative side (which would beheavily involved in implementing new payment models) was muchless enthusiastic. Nonetheless, the MOH has always been at least for-mally in favour of government reform, and was clearly a centraldriver of the 1Care reform proposal. Finally, private and corporateinterests including private hospitals and GLCs generally supportedreforms since it promised them a larger share of the public sectordominated healthcare market. (GLCs are for-profit companies direct-ly or indirectly under Malaysian government control, and are largestakeholders in commercial private healthcare, owning 40% of pri-
+vate hospital beds in Malaysia.)
+Opponents of reform
+The main groups against reform were civil society actors (consumergroups and trade unions), medical provider associations and oppos-ition parties. While UMNO dominated Malaysian politics through-out the period in question and opposition parties had never heldpower, these opposition parties played important roles in health re-form debates. They all opposed the reforms of the late 1990s such asthe proposal to corporatize all public hospitals in Malaysia; whenthe main opposition parties united to form the ‘Barisan Alternatif’coalition before the 1999 General Election, their manifesto commit-ting to ‘abolish all programs to privatize the public health system’(Barisan Alternatif, 1999 ). They have remained opposed to the gov-
+ernment’s proposals for health system reform: during the 2013General Election, the main opposition parties released a commonmanifesto once again declaring that they ‘reject all attempts to intro-duce a healthcare tax such as 1Care; Ensure free healthcare for allMalaysians through government hospitals while incentivizing theprivate sector to provide healthcare services at a reasonable rate’(Opposition Joint Platform, 2013 ).
+Civil society groups, such as NGOs, trade unions and consumer
+groups, have similarly opposed the government’s health system re-form proposals. The important role played by this sector is in itselfan anomaly, given that civil society has been relatively weak inMalaysia compared to other countries at its level of development,
+due to a legacy of state policies which constrained the space for inde-
+pendent civil society organizations ( Pepinsky, 2009 ). Unions, con-
+sumer groups and health provider groups rallied together to formthe Citizen’s Health Initiative in 1997, and a similar set of groupsformed the Coalition Against the Privatization of Health Services(CAPHS) in 2005.
+A third group of reform opponents were private sector doctors,
+who comprise approximately half of all doctors in Malaysia. Thekey national bodies representing doctors and hospitals in the privatesector include the Malaysian Medical Association (MMA), with/C248000 members of the total 49 000 doctors in the country, the
+Federation of Private Medical Practitioners Associations, Malaysia(FPMPAM) with 5000 members, and the Association of PrivateHospitals Malaysia (APHM). Among clinicians, the largest andmost influential in health financing reform debates are the estimated7000 private general practitioners (GPs) in Malaysia, who functionas either group practices or as solo independent clinics.
+While civil society and NGOs were more prominent in privatiza-
+tion debates in the 1990s ( Barraclough, 1999 ), opposition from pri-
+vate GPs was critical in thwarting the implementation of the 1Carereform. Stakeholders identified specialist clinics in particular asvehement opponents of 1Care, since they would likely lose patientsand revenues under a system that incorporated a family medicine‘gatekeeper’ who would only refer to patients to them who couldnot be treated by a GP (Interview no. 9, 2015; Leng and Hong,
+2015 ). Conversely, interviewees argued that non-specialist GPs who
+had fewer patients (and lower revenues) would be potentially opento a capitation-based system that would increase their patient num-bers, with their support or opposition depending critically on thecapitation rates to be agreed with the government (Interview no. 3,2015).
+Interest group opposition in itself is a common feature of health
+reform. But its success in Malaysia is notable, given that, first, inother sectors, the Malaysian state is distinctive for its ability to carryHealth Policy and Planning , 2019, Vol. 34, No. 10 735Downloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ out difficult policies in the face of organized opposition from social
+groups. Slater (2010) e.g. notes that the Malaysia has ‘one of the
+strongest ...state apparatuses in the developing world’ from an early
+stage ‘noteworthy for the effectiveness of its coercive and adminis-trative institutions’ and highlights that, in contrast to so many devel-oping countries, it has had relatively little trouble extractingtaxation from economic elites. Second, in many health reform epi-sodes, health providers are the central interest group. At severalinstances in the health reform debates in Malaysia, providers werepartially divided about reforms. The fact that the government clearlychose to step back from conflict on a number of occasions despite itsstrength vis-a-vis civil society, and despite divisions in the oppos-ition, suggests something significant about the underlying politics ofhealth reform, which we discuss further below.
+Veto gates analysis
+We now turn to ‘veto gates’ theory for an alternative explanationfor the failure of healthcare reform in Malaysia. Veto gates theorycontends that the number of decision-making points or ‘veto gates’
+through which a policy must pass are potential hurdles that can
+waylay or block the passage of government policies and programs(Tsebelis, 2002 ). A classic example is the USA, where despite opin-
+ion polls showing majorities of the public supporting expansion ofhealth coverage, legislation towards this goal was blocked overmore than 50 years because of the large number of ‘veto points’ inthe American system: two houses of Congress (one of which hasrules which require a supermajority to pass most legislation), a judi-ciary with the power to strike down legislation, and a federal systemwith a pivotal role for states in decision-making and policy imple-mentation. Closer to Malaysia, Selway (2011) argues that the frag-
+menting effect of the Thai electoral rules prior to the 1997constitutional reform prevented health reform in Thailand.
+However, this theory is problematic in Malaysia’s case, since it
+has unusually few veto gates. In Malaysia’s Westminster-style parlia-mentary system, a large degree of power is delegated to the PM by themajority party or coalition. As long as the PM retains the support ofhis party, there are few formal checks on his policymaking power.Internally, the PM’s position over the period in question was furtherstrengthened by the ruling party’s centralization and strong internaldiscipline ( Brownlee, 2007 ;Levitsky and Way, 2010 ;Slater, 2010 ).
+MacIntyre (2001) notes that during this period, ‘With the cabinet
+overwhelmingly dominated by UMNO, for most purposes the effect-ive locus of veto power is within the UMNO leadership. If UMNOleaders favour a policy change, it easily obtains cabinet approval andpasses quickly into law since there are no other veto players to bereckoned with.’ If the PM and the Cabinet decide to make a policychange (such as health reform), they have an automatic parliamentarymajority. Therefore, ‘veto gates’ theory does not explain the govern-ment’s persistent failure to pass healthcare reform.
+Historical institutionalist analysis
+The final set of theories that we bring to bear on understanding thefailure of healthcare reforms in Malaysia are historical institutional-ist approaches. Historical institutionalist scholars view existing insti-tutions—political and legal structures, formal and informal rules,laws and regulations—as the results of a series of political strugglesbetween groups, emphasizing the contingent and historically deter-mined nature of the process by which some social groups are mobi-lized into such issue conflicts while others remain latent ordemobilized. Historical institutionalists also emphasize that politicalinstitutions are ‘sticky’ and difficult to change, so that the initial
+form of institutions strongly influences policy choices long into thefuture ( Pierson, 2004 ). Applied to health policy, historical institu-
+tionalist approaches emphasize (1) the important of initial condi-tions when key institutions were created, which shape the initialform that institutions take; (2) the sequencing of health reforms; and(3) the alignment of large social and political groupings around pol-icy issues, which is in turn shaped by the initial conditions and thesequencing of reforms ( Hacker, 1998 ).
+In Malaysia’s case, the issue of reform sequencing emerged as a
+critical explanation for the persistent failure of reform efforts. Anumber of stakeholders noted that the reason why the governmentfeared pushing through these reforms was that they believed that theMalaysian public was deeply accustomed to low-cost services paidfor out of general taxation, and would resist heavily any new systemthat required premiums and higher co-pays. Specifically, the pointrepeatedly raised was that it would be hard to make these changes,given how accustomed Malaysians were to current system.
+Several interviewees noted the highly salient fact that patients pay
+just 5 ringgit ( /C24$1) for doctor’s visits as a symbolic element of the
+existing healthcare system that voters were extremely attached to:
+Since independence, people have been given free care, subsidized
+to a level of $1. Now, I am just trying to say: Can we top it up to
+$5?...There is hue and cry from the public, and politicians who
+are following say no, why should we tax the public? So they
+know they are going to lose, politically the government will godown, because the opposition will attack. It is not going to hap-
+pen.Interview no. 27 (2015)
+One Ministry official stressed the same idea, noting that even mild
+increases in user fees at various points were seen as untenable forpolitical reasons.
+There a lot of people who are misusing emergency department ...
+The emergency department is free. We say, we charge them 5
+Ringgit. They say cannot! Politically unacceptable! Now you’re
+talking about, 2 Ringgit or 5 Ringgit is politically unacceptable,
+and now you’re going to talk about ...health care financing, and
+transforming the healthcare system? How can it be acceptable?So I feel that sometimes ...people who are making policies are
+not realistic. They want something, and yet they so scared of a
+small thing. Interview no. 1 (2015)
+Another noted:
+They [the public] will be very, very upset. In this country, any-
+thing other than free service will be upsetting. Because they are
+so used to not paying for health care. Even vitamins, supplementsthey want government to pay for them. So, somewhere along the
+line, you need a bold government ...So I don’t think it’s going to
+happen any time now ...If the government is weak, when you do
+this, it will be political suicide. But if they want to do health care
+financing, it may be political suicide ...They do not know how
+to tell the rakyat [public]: Please pay for healthcare.
+This public opinion dynamic is also related to the politics of the rul-
+ing party, in a way that points back to the circumstances at the cre-ation of the modern Malaysian healthcare system shortly afterindependence. UMNO first emerged politically to defend the pos-ition of the ethnic Malay community in the years immediately priorto independence, and throughout its history, UMNO has delivered awide range of benefits to the ethnic Malay community in exchangefor their political support ( Pepinsky, 2009 ;Slater, 2010 ). Health is
+an important component of this relationship ( Barraclough, 2000 ;
+Chee, 2008 ), and this political imperative to deliver services to the736 Health Policy and Planning , 2019, Vol. 34, No. 10Downloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ rural Malay population can help explain the political logic of
+Malaysia’s historic achievements in achieving broad access tohealthcare. Given this political dynamic, UMNO leaders were un-willing to take steps that made it seem to their voters as if they werereducing their access to highly subsidized health services. They feltthat, given the reliance of the ruling coalition on the votes of ruralMalays who are the largest beneficiaries of the existing system, anychange would be, in an interviewee’s words, ‘political suicide’.
+This has been noted in the secondary literature—reflecting on
+the failure of the corporatization reform in 2000, Barraclough noted‘Any radical change to the role of the state as provider of publichealthcare poses problems of political legitimacy for a ruling coali-tion which has historically projected itself as delivering socioeco-nomic benefits to the population and especially to its principalconstituency, the rural Malays’ ( Barraclough, 2000 ).
+It was also noted in stakeholder interviews:
+Who are the main users of the public healthcare service? Public
+servants, mostly from the Malays, and those who are ...from the
+rural area, who are also mostly Malay: they use this system. Andthey are being made to understand by the political rulers, that, in
+a way, we are giving it to you ...So these are the group which
+will oppose very much, if the social health insurance people come
+in. It will be political suicide for the government if it comes in,
+because how are they going to talk to this group of people whohad been receiving healthcare, especially in rural area throughout
+all these years, at the most negligible fees? Interview no. 3 (2015)
+Others highlighted the extent to which the current Barisan Nasional
+coalition relies on smaller rural-based parties (such as from Sabahand Sarawak) and the votes of rural UMNO voters (in part becauseof gerrymandered parliamentary constituencies) who are perceivedas more like to favour the status quo and therefore resist anychanges to current benefits:
+I don’t think, under the current circumstances, where the polit-
+ical domination isn’t as strong as it was before, it’s that easy to
+reach that consensus. Especially [now], when you see the coali-
+tion where the party that represents more rural areas is getting
+stronger. So you can see the demand of the rural [population]
+where everything is being provided by the government is the keywords. I don’t think you want to touch reform ...Good luck to
+the politician [who tries that].
+These public opinion dynamics, working in conjunction with inter-
+est group opposition, were in our analysis the fundamental con-straint to the implementation of health financing reform.
+Discussion and conclusion
+In this article, we examine the case of a health financing reform thatnever happened, in Malaysia. In doing so, we find that the theoriesof historical institutionalism, and its emphasis on path dependencythrough the mechanism of policy feedback, best explain the failureto implement comprehensive healthcare financing and delivery re-form. In this section, we consider the Malaysian case in comparativeperspective, and then consider the implications of this finding for fu-ture reform efforts.
+International comparisons
+A natural point of comparison for Malaysia’s health reform is otherrecent reforms in middle-income countries. A common pattern isdiscernible in many such countries: typically the poor were relativelydisadvantaged by an inequitable, two-tiered system, in which publicexpenditure favoured the relatively better off. For example in manyLatin American cases, spending per capita was much higher in paral-
+lel social security systems which served civil servants and the formalsector labour force, while the rural poor and informal sector work-ers relied on the underfunded public sector ( Kauffman and Nelson,
+2004 ). In these contexts, comprehensive reform towards a more uni-
+versal and equitable insurance-based system was very difficult topass, because of interest group opposition, but it was often political-ly popular ( Harris, 2015 ). A key challenge in such cases was not
+winning over public opinion, but defeating interest group coalitionsrepresenting the relative elite groups (civil servants, urban middleclass, some groups of medical providers) that benefited from theexisting system. In a number of cases, democratizing reforms werekey turning point which broke the political stalemate and triggeredmajor health system reforms ( Wong, 2004 ;Selway, 2011 ;Gomez-
+Dantes et al., 2015 ).
+However, applying this model of health reform to Malaysia is
+misleading because the starting point in Malaysia was roughly theopposite of this. Existing health spending was unusually progressive,in contrast to the fragmented and regressive systems common toother pre-reform health systems. The challenge was not defeatinginterest groups opposed to reform, but rather to reassure the publicthat a new system will maintain the universality and progressivityof the existing Malaysian system. In this regard, a more relevantcomparator for Malaysia may be the group of health systems, likeHong Kong and Sri Lanka, which achieved early universal access togovernment-financed and -provided healthcare in parallel with out-of-pocket financed private sectors that accommodate wealthier con-sumers ( Rannan-Eliya et al. , 2016 ). The experience of Hong Kong
+in particular provides close parallels: like Malaysia, Hong Kong has
+had a long history of attempted comprehensive health finance re-form to shift to a unified national insurance-based system ( Gauld,
+2007 ), supported by successive governments, which were similarly
+unconstrained by formal institutions checks (or veto gates) on deci-sion making. But comprehensive financing reform in Hong Kongwas blocked by a number of factors, including wariness from thepublic, who were attached to the existing health financing system(Luk, 2014 ).
+Implications for future reform efforts
+The political dynamics of all reform efforts in Malaysia must be
+reassessed following the historic defeat in 2018 of the Barisan
+Nasional coalition and the election of former PM Mahathir
+Mohamed as leader of the opposition Pakatan Harapan coalition.
+However, an implication of our findings which apply to any futurereform efforts is that an important obstacle will continue to be pub-lic opinion. Given the Malaysian system’s remarkable achievementsin access and financial protection, the public’s uncertainty in theface of dramatic change can be seen as rational. Reform proposalswill be more popular, and therefore more feasible, if policymakerscan identify policy options which are clearly understood by the pub-lic as preserving these attributes. It is not enough to simply craftgood policy; it must also be understood by the public as such.
+However, creating a popular reform highlights important trade-
+offs. As Rannan-Eliya et al. (2013) have shown, the current health
+financing system in Malaysia is extremely progressive, since thehighest income groups pay a large portion of taxes, but often opt forprivate sector healthcare options for themselves. Given this baseline,citizens do not seem irrational to worry that, depending on thedetails, reforms could shift the situation in a more regressive direc-tion. It is also possible to design a comprehensive reform that shiftsMalaysia to an insurance-based system which would give allHealth Policy and Planning , 2019, Vol. 34, No. 10 737Downloaded from https://academic.oup.com/heapol/article/34/10/732/5575920 by Singapore Institute of Management user on 19 February 2024
+ Malaysians access to public and private facilities, while maintaining
+or increasing progressivity, by making insurance premiums progres-sive and exempting the poor. But as Rannan-Eliya et al. (2013) note,
+this would likely involve higher levels of public spending. This maybe an unwelcome trade-off to policymakers who had originally seenmoving to an insurance-based system as a way to reduce growth inpublic expenditures on health. But the politics of reform may makeit inevitable.
+Finally, our interviews highlighted serious concerns regarding
+the process by which previous reform policies have been designed,specifically the extent to which the reform process was open and in-clusive, and the extent to which broad groups of stakeholders wereconsulted and taken into account ( Juni, 2014 ; Interview no. 7,
+2015; Interview no. 16, 2015; Interview no. 38, 2015). A number ofinterviewees referred to the secretive process by which previousreforms had been developed as a key obstacle to generating broaderbuy-in, especially from key stakeholders such as medical professio-nals. Such a process would help not just with interest groups butalso with public opinion. Political scientists have shown that in othersettings, the public cannot easily make judgments about the contentof complicated policy issues about which even specialists disagree.Rather, voters rely on cues from trusted stakeholders in the systemabout whether a given policy (such as a health reform proposal) islikely to be in their interests or not ( Achen and Bartels, 2016 ).
+Crafting an inclusive process that generated input and buy in fromprevious reform opponents such as NGOs and medical professionalswould be difficult, but could signal a broad social consensus on theneed for reform, and would thereby reduce the likelihood of the
+public disapproval which was fatal to previous reform efforts.
+Ethical approval : Ethical clearance was received from the Harvard
+School of Health Institutional Review Board and Malaysia’sMedical Research and Ethnics Committee (MREC) and all inter-viewees provided informed consent before participating ininterviews.
+ ",oxfordacademic,Healthcare,Malaysia
