@@ -1,0 +1,36 @@
+Singapore’s telco market may look saturated, but players are still vying to enter
+
+Singapore’s telco market may appear saturated, but players such as Colt are still vying to set up shop
+Colt will offer businesses, but not consumers, high-bandwidth connections to a network of financial centers
+NetLink Trust, which operates telecom infrastructure, was set for a $1.68 billion Singapore IPO this week
+Tiny Singapore’s telecommunications market may look saturated, but some players are still taking aim at the market.
+The existing telcos appear to have the island’s population well-covered: The city-state had a mobile penetration rate of nearly 150 percent as of June 2016, with a residential wired broadband penetration rate of 98.4 percent and a wireless penetration rate of nearly 193 percent, according to government data.
+That high penetration rate was likely driven by Singapore’s “Smart Nation” ambition to integrate digital technology seamlessly across work, households and public services to boost efficiency and quality of life.
+But one new player, Colt, previously known as City of London Telecom, is pushing into the city-state’s market as part of its 500 million euro (US$573 million) global investment plan for the next three years.
+“We don’t think the market is saturated at all. It’s growing,” Carl Grivner, CEO of Colt, told CNBC’s “Squawk Box” on Friday, pointing toward the city-state’s advanced gross domestic product (GDP) growth estimate of 2.5 percent for the second quarter, released on Friday, as “healthy.”
+“Singapore was the first market outside of Europe that we wanted to build in,” he said. “In Singapore the market is expected to grow 5 percent a year over the next four years, so we think it’s a great time to come to Singapore.”
+Colt isn’t targeting retail consumers, however, aiming instead to build and own a next-generation fiber network, offering high-bandwidth connectivity for businesses between Singapore, Tokyo, Chicago, London, Frankfurt and other global financial centers.
+Grivner said that niche was “where we think the real growth is.”
+Colt was also aiming at major cities in the U.S., including New York, Chicago, San Francisco, with plans to establish its network presence there.
+Singapore’s growing telco competition
+Colt’s entry into Singapore came as the city-state’s telco market has faced its biggest shakeup in years.
+In 2016, Australia-based TPG Telecom won the rights to become Singapore’s fourth telco operator after the three incumbents — Singtel
+, Starhub
+and M1
+— had the market locked up for 15 years.
+TPG’s highly-anticipated entry in December spurred hopes existing players would offer more competitively priced data and mobile bundles, as well as faster speeds.
+Homegrown internet services provider MyRepublic, which lost its bid to become the fourth telco, also recently announced plans to launch mobile services in Singapore as early as October.
+MyRepublic, which was also aiming for an initial public offering (IPO) by the end of 2018 to fund its expansion in Asia, will join Circles.Life as a mobile virtual network operator (MVNO) in the market.
+MVNOs provide mobile services by purchasing airtime from one of the current players, instead of developing their own mobile network.
+‘Smart Nation’ initiatives drive change
+A main driver of the increased activity in Singapore’s telecom market came from the Infocomm Development Authority of Singapore’s (IDA) 10-year master-plan, Intelligent Nation 2015, or iN2015, for an “infocomm-enabled future,” offering ultra-high speeds and “intelligent” telco infrastructure.
+The IDA later merged with the Media Development Authority of Singapore (MDA), to become the Infocomm Media Development Authority of Singapore (IMDA)
+As part of the master-plan, in 2006, IMDA appointed OpenNet Consortium (now NetLink Trust) as the sole network company to design, build and operate the passive infrastructure, such as ducts, manholes and fiber cables, for Singapore’s ultra high-speed Next Generation National Broadband Network, or Next Gen NBN.
+That required Singtel, which owned OpenNet, to divest its stake in the company to separate the passive fiber network infrastructure, the active infrastructure, and the retail service provider layers, with the aim of ensuring fair competition in the retail market.
+NetLink Trust CEO Tong Yew Heng told CNBC that he was excited about the long-term prospects of his company, which has a 2.3 billion Singapore dollar ($1.68 billion) IPO, the biggest in Singapore since 2011, set to list on the Singapore Exchange’s (SGX) main board on Wednesday.
+NetLink Trust owned a network of approximately 76,000 kilometers of fibre optic cables, 16,200 km of ducts, and 62,000 manholes as of the end of March.The network connects both residential and non-residential locations.
+Tong noted that increasingly, households were obtaining more than one fiber connection, adding that might become the norm ahead, which would translate into significant growth in the fiber space.
+“In the residential space today, we have more than 1.1 million active end-users and that translates to 76 percent penetration, which is 1.1 million out of an addressable 1.4 million households in Singapore. That number will continue to grow and frankly, I think it will grow beyond a hundred percent,” he said.
+Tong does not view the rising competition in the telco space as a threat. “A lot of the telcos are our customers. We support them. We have nationwide coverage, a very extensive fiber-based network.”
+Tong also expected that wireless technology would be complementary to a fiber base, which NetLink would be able to support.
+“It’s not a substitution to (the) fiber network,” Tong said. He expects the introduction of 5G technology to be positive for the business, simply because it would require the deployment of more base stations and small cell networks across the country than the current 4G network.
