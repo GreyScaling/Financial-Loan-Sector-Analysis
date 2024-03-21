@@ -13,19 +13,19 @@ def horizontalStackedBar(results, category_names, title="Sentiment Analysis Resu
     category_names : list of str
         The category labels.
     """
-    
+
     labels = list(results.keys())
     data = np.array(list(results.values()))
     data_cum = data.cumsum(axis=1)
     category_colors = plt.colormaps['RdYlGn'](
         np.linspace(0.15, 0.85, data.shape[1]))
 
-    fig, ax = plt.subplots(figsize=(10, 7))
-    
+    fig, ax = plt.subplots(figsize=(10, 10))
+
     ax.invert_yaxis()
     ax.xaxis.set_visible(False)
     ax.set_xlim(0, np.sum(data, axis=1).max())
- 
+
     for i, (colname, color) in enumerate(zip(category_names, category_colors)):
         widths = data[:, i]
         starts = data_cum[:, i] - widths
@@ -36,7 +36,19 @@ def horizontalStackedBar(results, category_names, title="Sentiment Analysis Resu
         text_color = 'white' if r * g * b < 0.5 else 'darkgrey'
         ax.bar_label(rects, label_type='center', color=text_color)
     ax.legend(ncols=len(category_names), bbox_to_anchor=(0, 1),
-              loc='lower left', fontsize='small')
+                loc='lower left', fontsize='small')
 
     ax.set_title(title, loc = 'right')
     return fig, ax
+
+def get_results_for_model(model, column_name="Sector"):
+  result = dict()
+  sectors = model[column_name].unique()
+  
+  for s in sectors:
+    subset = model.query("Sector == @s")
+    positive = subset[subset['sentiment'] == 1]
+    negative = subset[subset['sentiment'] == -1]
+    neutral = subset[subset['sentiment'] == 0]
+    result[s] = [len(negative), len(neutral), len(positive)]
+  return result

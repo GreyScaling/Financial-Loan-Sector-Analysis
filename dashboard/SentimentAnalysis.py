@@ -1,14 +1,15 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+from wordcloud import STOPWORDS
 from utilities import horizontalStackedBar
 
 class SentimentAnalysis:
   def __init__(self, name):
     self.name = name 
 
-  def make_pie_charts(self):
-    df = self.dfs[0]
+  def make_pie_charts(self, df):
     cmap = plt.cm.get_cmap('RdYlGn')
     colors = {1: cmap(0.9), 0: cmap(0.5), -1: cmap(0.1)}
     sentiment_counts = df['sentiment'].value_counts().sort_index()
@@ -18,17 +19,17 @@ class SentimentAnalysis:
 
     return fig
   
-  def make_stacked_bar(self):
+  def make_stacked_bar(self, df):
     category_names = ['Negative', 'Neutral', 'Positive']
 
     models_name = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
 
     results = dict()
 
-    for i in range(len(self.dfs)):
+    for i in range(len(df)):
       # make it so that it will follow the order
       model_list = []
-      model_dict = self.dfs[i]['sentiment'].value_counts().to_dict()
+      model_dict = df[i]['sentiment'].value_counts().to_dict()
       model_list.append(model_dict[-1]); model_list.append(model_dict[0]); model_list.append(model_dict[1])
       results[models_name[i]] = model_list
 
@@ -50,3 +51,8 @@ class SentimentAnalysis:
 
   def make_plot(self, df):
     pass
+  
+  def make_wordcloud(self, df, colNames="Content"):
+    wordcloud = WordCloud(width=800, height=400, max_font_size=100,
+                          max_words=100, background_color="white").generate(' '.join(df[colNames]))
+    return wordcloud
