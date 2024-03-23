@@ -6,10 +6,37 @@ from wordcloud import STOPWORDS
 from utilities import horizontalStackedBar
 
 class SentimentAnalysis:
+  """
+  A class for performing sentiment analysis on financial loan data.
+
+  Attributes:
+    name (str): The name of the sentiment analysis object.
+    df (pandas.DataFrame): The main dataframe containing the combined sentiments.
+    dfs (list): A list of dataframes containing individual sentiment analysis results.
+
+  Methods:
+    make_pie_charts(df): Generates pie charts based on sentiment counts.
+    make_stacked_bar(df): Generates a stacked bar chart based on sentiment models.
+    read_data(): Reads the sentiment data from CSV files.
+    make_plot(df): Placeholder method for making a plot.
+    make_wordcloud(df, colNames): Generates a wordcloud based on the specified column.
+
+  """
+
   def __init__(self, name):
     self.name = name 
 
   def make_pie_charts(self, df):
+    """
+    Generates pie charts based on sentiment counts.
+
+    Args:
+      df (pandas.DataFrame): The dataframe containing sentiment data.
+
+    Returns:
+      matplotlib.figure.Figure: The generated figure object.
+
+    """
     cmap = plt.cm.get_cmap('RdYlGn')
     colors = {1: cmap(0.9), 0: cmap(0.5), -1: cmap(0.1)}
     sentiment_counts = df['sentiment'].value_counts().sort_index()
@@ -20,6 +47,17 @@ class SentimentAnalysis:
     return fig
   
   def make_stacked_bar(self, df):
+    """
+    Generates a stacked bar chart based on sentiment models.
+
+    Args:
+      df (pandas.DataFrame): The dataframe containing sentiment data.
+
+    Returns:
+      matplotlib.figure.Figure: The generated figure object.
+      matplotlib.axes.Axes: The generated axes object.
+
+    """
     category_names = ['Negative', 'Neutral', 'Positive']
 
     models_name = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
@@ -39,6 +77,14 @@ class SentimentAnalysis:
     
     
   def read_data(self):
+    """
+    Reads the sentiment data from CSV files.
+
+    Returns:
+      pandas.DataFrame: The main dataframe containing the combined sentiments.
+      list: A list of dataframes containing individual sentiment analysis results.
+
+    """
     # need to change the path to the absolute path
     self.df = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/combined_sentiments.csv', index_col=0)
     sigma_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/sigma_sentiments.csv', index_col=0)
@@ -50,9 +96,27 @@ class SentimentAnalysis:
     return self.df, self.dfs
 
   def make_plot(self, df):
+    """
+    Placeholder method for making a plot.
+
+    Args:
+      df (pandas.DataFrame): The dataframe containing data for the plot.
+
+    """
     pass
   
   def make_wordcloud(self, df, colNames="Content"):
+    """
+    Generates a wordcloud based on the specified column.
+
+    Args:
+      df (pandas.DataFrame): The dataframe containing text data.
+      colNames (str): The name of the column to generate the wordcloud from. Default is "Content".
+
+    Returns:
+      wordcloud.WordCloud: The generated wordcloud object.
+
+    """
     wordcloud = WordCloud(width=800, height=400, max_font_size=100,
                           max_words=100, background_color="white").generate(' '.join(df[colNames]))
     return wordcloud

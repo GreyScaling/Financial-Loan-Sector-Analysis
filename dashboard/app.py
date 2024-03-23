@@ -57,7 +57,7 @@ def sentiment_analysis_page(sentimentAnalysis, sector):
       pass
     
   else:
-    options = st.radio("Select the option", ["Pie Chart", "WordCloud"])
+    options = st.selectbox("Select the option", ["Pie Chart", "WordCloud"])
     if options == "Pie Chart":
       generate_pie_chart_page(sentimentAnalysis, sector)
     elif options == "WordCloud":
@@ -100,7 +100,8 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All"):
   return None
 
 def generate_wordcloud_page(sentimentAnalysis, sector):
-  if sector == "All":
+  options = st.radio("Select the option", ["All", "Negative", "Neutral", "Positive"])
+  if sector == "All": # need to apply 
     st.text("WordCloud for " + sector)
     wordcloud = sentimentAnalysis.make_wordcloud(sentimentAnalysis.df)
     st.image(wordcloud.to_image())
@@ -112,7 +113,6 @@ def generate_wordcloud_page(sentimentAnalysis, sector):
   return None
 
 def generate_stacked_bar_chart_page(sentimentAnalysis):
-
   model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
   category_names = ['Negative', 'Neutral', 'Positive']
   results = dict()
