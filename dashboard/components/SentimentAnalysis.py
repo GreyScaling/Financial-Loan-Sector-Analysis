@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 from wordcloud import STOPWORDS
-from utilities import horizontalStackedBar
 
 class SentimentAnalysis:
   """
@@ -71,7 +70,7 @@ class SentimentAnalysis:
       model_list.append(model_dict[-1]); model_list.append(model_dict[0]); model_list.append(model_dict[1])
       results[models_name[i]] = model_list
 
-    fig, ax = horizontalStackedBar(results, category_names, title="Bar chart based on Sentiment Models")
+    fig, ax = self.horizontalStackedBar(results, category_names, title="Bar chart based on Sentiment Models")
 
     return fig, ax 
     
@@ -86,12 +85,12 @@ class SentimentAnalysis:
 
     """
     # need to change the path to the absolute path
-    self.df = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/combined_sentiments.csv', index_col=0)
-    sigma_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/sigma_sentiments.csv', index_col=0)
-    finbert_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/finbert_sentiments.csv', index_col=0)
-    financial_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/financial_sentiments.csv', index_col=0)
-    soleimanian_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/soleimanian_sentiments.csv', index_col=0)
-    yiyangkhost_sentiments = pd.read_csv('/Users/jovan/Documents/UOB-Financial-Loan-Analysis/sentiment_analysis/yiyangkhost_sentiments.csv', index_col=0)
+    self.df = pd.read_csv('csvs/combined_sentiments.csv', index_col=0)
+    sigma_sentiments = pd.read_csv('csvs/sigma_sentiments.csv', index_col=0)
+    finbert_sentiments = pd.read_csv('csvs/finbert_sentiments.csv', index_col=0)
+    financial_sentiments = pd.read_csv('csvs/financial_sentiments.csv', index_col=0)
+    soleimanian_sentiments = pd.read_csv('csvs/soleimanian_sentiments.csv', index_col=0)
+    yiyangkhost_sentiments = pd.read_csv('csvs/yiyangkhost_sentiments.csv', index_col=0)
     self.dfs = [sigma_sentiments, finbert_sentiments, financial_sentiments, soleimanian_sentiments, yiyangkhost_sentiments]
     return self.df, self.dfs
 
@@ -120,3 +119,84 @@ class SentimentAnalysis:
     wordcloud = WordCloud(width=800, height=400, max_font_size=100,
                           max_words=100, background_color="white").generate(' '.join(df[colNames]))
     return wordcloud
+  
+    
+  def sentiment_color(self, sentiment):
+    """
+    Returns the background color based on the sentiment value.
+
+    Parameters:
+    sentiment (int): The sentiment value (-1, 0, or 1).
+
+    Returns:
+    str: The CSS background color value.
+
+    """
+    if sentiment == -1:
+      return 'background-color: red'
+    elif sentiment == 0:
+      return 'background-color: yellow'
+    elif sentiment == 1:
+      return 'background-color: green'
+    
+  def horizontalStackedBar(self, results, category_names, title="Sentiment Analysis Results"):
+    """
+    Parameters
+    ----------
+    results : dict
+        A mapping from question labels to a list of answers per category.
+        It is assumed all lists contain the same number of entries and that
+        it matches the length of *category_names*.
+    category_names : list of str
+        The category labels.
+    """
+
+    labels = list(results.keys())
+    data = np.array(list(results.values()))
+    data_cum = data.cumsum(axis=1)
+    category_colors = plt.colormaps['RdYlGn'](
+        np.linspace(0.15, 0.85, data.shape[1]))
+
+    fig, ax = plt.subplots(figsize=(10, 10))
+
+    ax.invert_yaxis()
+    ax.xaxis.set_visible(False)
+    ax.set_xlim(0, np.sum(data, axis=1).max())
+
+    for i, (colname, color) in enumerate(zip(category_names, category_colors)):
+        widths = data[:, i]
+        starts = data_cum[:, i] - widths
+        rects = ax.barh(labels, widths, left=starts, height=0.5,
+                        label=colname, color=color)
+
+        r, g, b, _ = color
+        text_color = 'white' if r * g * b < 0.5 else 'darkgrey'
+        ax.bar_label(rects, label_type='center', color=text_color)
+    ax.legend(ncols=len(category_names), bbox_to_anchor=(0, 1),
+                loc='lower left', fontsize='small')
+
+    ax.set_title(title, loc = 'right')
+    return fig, ax
+
+  def get_results_for_model(self, model, column_name="Sector"):
+    """
+    Calculates the sentiment analysis results for each unique value in the specified column of the given model.
+
+    Parameters:
+      model (pandas.DataFrame): The dataframe containing the data for sentiment analysis.
+      column_name (str, optional): The name of the column to group the results by. Defaults to "Sector".
+
+    Returns:
+      dict: A dictionary where the keys are the unique values in the specified column and the values are lists
+          containing the counts of negative, neutral, and positive sentiments for each unique value.
+    """
+    result = dict()
+    sectors = model[column_name].unique()
+
+    for s in sectors:
+      subset = model.query("Sector == @s")
+      positive = subset[subset['sentiment'] == 1]
+      negative = subset[subset['sentiment'] == -1]
+      neutral = subset[subset['sentiment'] == 0]
+      result[s] = [len(negative), len(neutral), len(positive)]
+    return result

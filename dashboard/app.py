@@ -1,148 +1,48 @@
 import streamlit as st
 import pandas as pd
-import numpy as np 
-import matplotlib.pyplot as plt
-import os
 
-from SentimentAnalysis import SentimentAnalysis
-from TopicModelling import TopicModelling
+from components.SentimentAnalysis import SentimentAnalysis
+from components.TopicModelling import TopicModelling
 
-from utilities import horizontalStackedBar, get_results_for_model
+from components.sentiment_components import *
 
-# emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(
   page_title = 'Financial Loan Analysis Dashboard',
   layout = 'wide',
   initial_sidebar_state="expanded"
 )
 
+def mainpage(sentimentAnalysis, topicModeling, options, sector):
+  """
+  This function is responsible for displaying the main page of the dashboard based on the selected options.
 
-def main():
-  sentimentAnalysis = SentimentAnalysis("Sentiment Analysis Dashboard")
-  sentimentAnalysis.read_data()
-  topicModeling = TopicModelling("Topic Modelling Dashboard")
-  options, sector = sidebar(sentimentAnalysis.df)
-  mainpage(sentimentAnalysis, topicModeling, options, sector)
-  return None
+  Parameters:
+  - sentimentAnalysis (object): The sentiment analysis object.
+  - topicModeling (object): The topic modeling object.
+  - options (str): The selected option ('Sentiment Analysis' or 'Topic Modeling').
+  - sector (str): The selected sector.
 
-def mainpage(sentimentAnalysis, topicModeling,  options, sector): # just pass the object instead of the df
+  Returns:
+  None
+  """
   if options == 'Sentiment Analysis':
     sentiment_analysis_page(sentimentAnalysis, sector)
-          
+      
   elif options == 'Topic Modeling':
     topic_modeling_page(topicModeling, sector)
     pass
-      
   return None
-
-def sentiment_analysis_page(sentimentAnalysis, sector):
-  
-  st.text("Sentiment Analysis")
-  all, negative, neutral, positive = sentiment_header()
-  
-  if sector == 'All': # sector
-    with all: # 'tab all'
-      options = st.selectbox("Select the option", ["Pie Chart", "WordCloud", "Stacked Bar Chart"])
-      if options == "Pie Chart":
-        generate_pie_chart_page(sentimentAnalysis)
-      elif options == "WordCloud":
-        generate_wordcloud_page(sentimentAnalysis, sector)  
-      elif options == "Stacked Bar Chart":
-        generate_stacked_bar_chart_page(sentimentAnalysis)
-    with positive:
-      pass
-    with negative:
-      pass
-    with neutral:
-      pass
-    
-  else:
-    options = st.selectbox("Select the option", ["Pie Chart", "WordCloud"])
-    if options == "Pie Chart":
-      generate_pie_chart_page(sentimentAnalysis, sector)
-    elif options == "WordCloud":
-      generate_wordcloud_page(sentimentAnalysis, sector)
-    pass
-  
-  return None
-
-
-def generate_pie_chart_page(sentimentAnalysis, sector="All"):
-  if sector == "All":
-    left_column, right_column = st.columns(2)
-    model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
-    for i , df in enumerate(sentimentAnalysis.dfs):
-      if i % 2 == 0:
-        with left_column:
-          st.text(model_names[i])
-          fig = sentimentAnalysis.make_pie_charts(df)
-          st.pyplot(fig)
-      else:
-        with right_column:
-          st.text(model_names[i])
-          fig = sentimentAnalysis.make_pie_charts(df)
-          st.pyplot(fig)
-  else:
-    left_column, right_column = st.columns(2)
-    model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
-    for i , df in enumerate(sentimentAnalysis.dfs):
-      subset = df[df['Sector'] == sector]
-      if i % 2 == 0:
-        with left_column:
-          st.text(model_names[i])
-          fig = sentimentAnalysis.make_pie_charts(subset)
-          st.pyplot(fig)
-      else:
-        with right_column:
-          st.text(model_names[i])
-          fig = sentimentAnalysis.make_pie_charts(subset)
-          st.pyplot(fig)
-  return None
-
-def generate_wordcloud_page(sentimentAnalysis, sector):
-  options = st.radio("Select the option", ["All", "Negative", "Neutral", "Positive"])
-  if sector == "All": # need to apply 
-    st.text("WordCloud for " + sector)
-    wordcloud = sentimentAnalysis.make_wordcloud(sentimentAnalysis.df)
-    st.image(wordcloud.to_image())
-  else:
-    st.text("WordCloud for " + sector)
-    subset = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
-    wordcloud = sentimentAnalysis.make_wordcloud(subset)
-    st.image(wordcloud.to_image())
-  return None
-
-def generate_stacked_bar_chart_page(sentimentAnalysis):
-  model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
-  category_names = ['Negative', 'Neutral', 'Positive']
-  results = dict()
-  for i in range(len(sentimentAnalysis.dfs)):
-    model_list = []
-    model_dict = sentimentAnalysis.dfs[i]['sentiment'].value_counts().to_dict()
-    model_list.append(model_dict[-1]); model_list.append(model_dict[0]); model_list.append(model_dict[1])
-    results[model_names[i]] = model_list
-    
-  st.text("Bar chart based on Sentiment Models")
-  fig, ax = horizontalStackedBar(results, category_names, title="Bar chart based on Sentiment Models")
-  st.pyplot(fig)
-  
-  for i , df in enumerate(sentimentAnalysis.dfs):
-    st.text(model_names[i])
-    df = get_results_for_model(df, 'Sector')
-    fig, ax = horizontalStackedBar(df, category_names, title=model_names[i] + " Sentiment Analysis")
-    st.pyplot(fig)
-  return None
-
-def topic_modeling_page(topicModeling, sector):
-  st.text("Topic Modeling")
-  return None
-
-def sentiment_header():
-  tab1, tab2, tab3, tab4 = st.tabs(["All", "Negative ☹️", "Neutral", "Positive 😊"])
-  
-  return tab1, tab2, tab3, tab4
 
 def sidebar(df : pd.DataFrame):
+  """
+  This function creates a sidebar for the loan analysis dashboard.
+  
+  Parameters:
+    df (pd.DataFrame): The DataFrame containing the loan data.
+  
+  Returns:
+    tuple: A tuple containing the selected option and sector.
+  """
   st.sidebar.title('Loan Analysis')
   st.sidebar.header("Filter : ")
   
@@ -159,12 +59,51 @@ def sidebar(df : pd.DataFrame):
     
   return options, sector
 
-def get_data():
-  script_dir = os.path.dirname(__file__)
-  rel_path = '/sentiment_analysis/combined_sentiments.csv'
-  abs_file_path = os.path.join(script_dir, rel_path)
-  df = pd.read_csv(abs_file_path, index_col=0)
-  return df 
+def sentiment_analysis_page(sentimentAnalysis, sector):
+  """
+  Displays the sentiment analysis page with various visualization options.
+
+  Parameters:
+  - sentimentAnalysis (object): The sentiment analysis object.
+  - sector (str): The sector for which the sentiment analysis is performed.
+
+  Returns:
+  None
+  """
+  st.text("Sentiment Analysis")
+  
+  selection = ["Pie Chart", "WordCloud", "Dataframes", "Stacked Bar Chart"]  
+  options = st.selectbox("Visualizations : ", selection)
+  
+  if options == "Pie Chart":
+    generate_pie_chart_page(sentimentAnalysis, sector)
+  elif options == "WordCloud":
+    generate_wordcloud_page(sentimentAnalysis, sector)                                             
+  elif options == "Stacked Bar Chart":
+    generate_stacked_bar_chart_page(sentimentAnalysis)
+  elif options == "Dataframes":
+    generate_dataframe_page(sentimentAnalysis, sector)
+
+  return None
+
+def topic_modeling_page(topicModeling, sector):
+  st.text("Topic Modeling")
+  return None
+
+def main():
+  """
+  This function is the entry point of the application.
+  It initializes the SentimentAnalysis and TopicModelling objects,
+  reads the data, and calls the sidebar and mainpage functions.
+
+  Returns:
+    None
+  """
+  sentimentAnalysis = SentimentAnalysis("Sentiment Analysis Dashboard") ; sentimentAnalysis.read_data()
+  topicModeling = TopicModelling("Topic Modelling Dashboard")
+  options, sector = sidebar(sentimentAnalysis.df)
+  mainpage(sentimentAnalysis, topicModeling, options, sector)
+  return None
 
 if __name__ == '__main__':
   main()
