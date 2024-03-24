@@ -30,7 +30,6 @@ def mainpage(sentimentAnalysis, topicModeling, options, sector):
       
   elif options == 'Topic Modeling':
     topic_modeling_page(topicModeling, sector)
-    pass
   return None
 
 def sidebar(df : pd.DataFrame):
