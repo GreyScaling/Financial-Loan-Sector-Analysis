@@ -104,7 +104,7 @@ class SentimentAnalysis:
     """
     pass
   
-  def make_wordcloud(self, df, colNames="Content"):
+  def make_wordcloud(self, df, colNames="Content", sector=None):
     """
     Generates a wordcloud based on the specified column.
 
@@ -116,8 +116,25 @@ class SentimentAnalysis:
       wordcloud.WordCloud: The generated wordcloud object.
 
     """
+    data = df[colNames]
+    
+    if sector == 'All':
+      sector = df['Sector'].unique()
+      data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in sector]))
+  
+    else:
+      print(sector + " is getting removed")
+      # if sector is more than 1 word
+      sector_words = sector.split()
+      remove_words = sector_words + [word.lower() for word in sector_words] + [word.upper() for word in sector_words]
+      print(remove_words)
+      data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in remove_words]))
+     
+    
+    data = data.astype(str)
+    
     wordcloud = WordCloud(width=800, height=400, max_font_size=100,
-                          max_words=100, background_color="white").generate(' '.join(df[colNames]))
+                          max_words=100, background_color="white").generate(' '.join(data))
     return wordcloud
   
     

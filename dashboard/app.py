@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
+import streamlit.components.v1 as components
 
 from components.SentimentAnalysis import SentimentAnalysis
 from components.TopicModelling import TopicModelling
-
 from components.sentiment_components import *
 
 st.set_page_config(
@@ -11,6 +11,7 @@ st.set_page_config(
   layout = 'wide',
   initial_sidebar_state="expanded"
 )
+
 
 def mainpage(sentimentAnalysis, topicModeling, options, sector):
   """
@@ -50,6 +51,9 @@ def sidebar(df : pd.DataFrame):
     options = ['Sentiment Analysis', 'Topic Modeling']
   )
   
+  if options == 'Topic Modeling':
+    return options, None
+  
   sectors = df['Sector'].unique()
   sector = st.sidebar.selectbox(
     'Select the sector :',
@@ -86,7 +90,12 @@ def sentiment_analysis_page(sentimentAnalysis, sector):
   return None
 
 def topic_modeling_page(topicModeling, sector):
-  st.text("Topic Modeling")
+  slider = st.select_slider('Select the number of topics', options=[i for i in range(2, 21)])
+  filename = f'assets/topic_model_{slider}_topics.html'
+  with open(filename, 'r') as f:
+    html_string = f.read()
+
+  components.html(html_string, width=4000, height=1500, scrolling=False)
   return None
 
 def main():

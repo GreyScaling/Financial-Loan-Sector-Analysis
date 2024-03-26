@@ -63,7 +63,7 @@ def generate_wordcloud_page(sentimentAnalysis, sector):
 
   if options == "All":
     st.text("Wordcloud for " + sector)
-    wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df)
+    wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df, sector=sector)
     st.image(wordcloud.to_image())
   else:
     for column in columns:
@@ -71,7 +71,7 @@ def generate_wordcloud_page(sentimentAnalysis, sector):
         st.text(column)
         column += "_Sentiments"
         subset = wordcloud_df[wordcloud_df[column] == sentimentsDict[options]]
-        wordcloud = sentimentAnalysis.make_wordcloud(subset)
+        wordcloud = sentimentAnalysis.make_wordcloud(subset, sector=sector)
         st.image(wordcloud.to_image())
       except ValueError:
         st.text("No data available")
