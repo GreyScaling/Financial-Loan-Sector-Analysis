@@ -1,18 +1,9 @@
 import streamlit as st
 import pandas as pd
+import streamlit.components.v1 as components
 
 from components.SentimentAnalysis import SentimentAnalysis
 from components.TopicModelling import TopicModelling
-
-# import imgkit
-# config = imgkit.config(wkhtmltoimage='../wkhtmltoimage')
-# imgkit.from_file('assets/topic_model_2_topics.html', 'output.jpg', config=config)
-
-
-import streamlit.components.v1 as components
-
-# Load the HTML content
-
 from components.sentiment_components import *
 
 st.set_page_config(
@@ -20,7 +11,6 @@ st.set_page_config(
   layout = 'wide',
   initial_sidebar_state="expanded"
 )
-
 
 
 def mainpage(sentimentAnalysis, topicModeling, options, sector):
