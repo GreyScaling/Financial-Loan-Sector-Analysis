@@ -85,12 +85,12 @@ class SentimentAnalysis:
 
     """
     # need to change the path to the absolute path
-    self.df = pd.read_csv('csvs/combined_sentiments.csv', index_col=0)
-    sigma_sentiments = pd.read_csv('csvs/sigma_sentiments.csv', index_col=0)
-    finbert_sentiments = pd.read_csv('csvs/finbert_sentiments.csv', index_col=0)
-    financial_sentiments = pd.read_csv('csvs/financial_sentiments.csv', index_col=0)
-    soleimanian_sentiments = pd.read_csv('csvs/soleimanian_sentiments.csv', index_col=0)
-    yiyangkhost_sentiments = pd.read_csv('csvs/yiyangkhost_sentiments.csv', index_col=0)
+    self.df = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/combined_sentiments.csv', index_col=0)
+    sigma_sentiments = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/sigma_sentiments.csv', index_col=0)
+    finbert_sentiments = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/finbert_sentiments.csv', index_col=0)
+    financial_sentiments = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/financial_sentiments.csv', index_col=0)
+    soleimanian_sentiments = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/soleimanian_sentiments.csv', index_col=0)
+    yiyangkhost_sentiments = pd.read_csv('https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/csvs/yiyangkhost_sentiments.csv', index_col=0)
     self.dfs = [sigma_sentiments, finbert_sentiments, financial_sentiments, soleimanian_sentiments, yiyangkhost_sentiments]
     return self.df, self.dfs
 

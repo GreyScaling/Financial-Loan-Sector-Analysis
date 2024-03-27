@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
-
+import requests
 from components.SentimentAnalysis import SentimentAnalysis
 from components.TopicModelling import TopicModelling
 from components.sentiment_components import *
@@ -91,9 +91,10 @@ def sentiment_analysis_page(sentimentAnalysis, sector):
 
 def topic_modeling_page(topicModeling, sector):
   slider = st.select_slider('Select the number of topics', options=[i for i in range(2, 21)])
-  filename = f'assets/topic_model_{slider}_topics.html'
-  with open(filename, 'r') as f:
-    html_string = f.read()
+  filename = f'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topic_model_{slider}_topics.html'
+
+  response = requests.get(filename)
+  html_string = response.text
 
   components.html(html_string, width=4000, height=1500, scrolling=False)
   return None
