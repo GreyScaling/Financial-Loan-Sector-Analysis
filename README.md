@@ -37,7 +37,4 @@ Follow these steps to view the interactive dashboard:
   streamlit run app.py
   ```
 
-## Topic Modeling Pipeline Documentation
-### Introduction
-
 
