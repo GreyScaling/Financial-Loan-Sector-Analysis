@@ -41,7 +41,8 @@ class SentimentAnalysis:
     sentiment_counts = df['sentiment'].value_counts().sort_index()
     sentiment_colors = [colors[sentiment] for sentiment in sentiment_counts.index]
     fig, ax = plt.subplots()
-    sentiment_counts.plot(kind='pie', colors=sentiment_colors, autopct='%1.1f%%', ax=ax)
+    sentiment_counts.plot(kind='pie', colors=sentiment_colors, autopct='%1.1f%%', ax=ax, labels=['Negative', 'Neutral', 'Positive'])
+    ax.set_ylabel('')
 
     return fig
   
@@ -120,6 +121,11 @@ class SentimentAnalysis:
     
     if sector == 'All':
       sector = df['Sector'].unique()
+      remove_words = [word.split() for word in sector]
+      remove_words = [item for sublist in remove_words for item in sublist]
+      remove_words = remove_words + [word.lower() for word in remove_words] + [word.upper() for word in remove_words]
+      remove_words += "oil gas"
+      print(remove_words)
       data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in sector]))
   
     else:
@@ -174,7 +180,7 @@ class SentimentAnalysis:
     category_colors = plt.colormaps['RdYlGn'](
         np.linspace(0.15, 0.85, data.shape[1]))
 
-    fig, ax = plt.subplots(figsize=(10, 10))
+    fig, ax = plt.subplots(figsize=(10, 4))
 
     ax.invert_yaxis()
     ax.xaxis.set_visible(False)
@@ -195,7 +201,7 @@ class SentimentAnalysis:
     ax.set_title(title, loc = 'right')
     return fig, ax
 
-  def get_results_for_model(self, model, column_name="Sector"):
+  def get_results_for_model(self, model, column_name="Sector", country="All"):
     """
     Calculates the sentiment analysis results for each unique value in the specified column of the given model.
 
@@ -212,6 +218,9 @@ class SentimentAnalysis:
 
     for s in sectors:
       subset = model.query("Sector == @s")
+      if country != "All":
+        subset = subset[subset['Country'] == country]
+        
       positive = subset[subset['sentiment'] == 1]
       negative = subset[subset['sentiment'] == -1]
       neutral = subset[subset['sentiment'] == 0]

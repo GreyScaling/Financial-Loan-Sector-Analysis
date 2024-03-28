@@ -3,7 +3,6 @@ import pandas as pd
 import streamlit.components.v1 as components
 import requests
 from components.SentimentAnalysis import SentimentAnalysis
-from components.TopicModelling import TopicModelling
 from components.sentiment_components import *
 
 st.set_page_config(
@@ -13,7 +12,7 @@ st.set_page_config(
 )
 
 
-def mainpage(sentimentAnalysis, topicModeling, options, sector):
+def mainpage(sentimentAnalysis, options, sector, country):
   """
   This function is responsible for displaying the main page of the dashboard based on the selected options.
 
@@ -22,15 +21,17 @@ def mainpage(sentimentAnalysis, topicModeling, options, sector):
   - topicModeling (object): The topic modeling object.
   - options (str): The selected option ('Sentiment Analysis' or 'Topic Modeling').
   - sector (str): The selected sector.
+  - country (str): The selected country.
 
   Returns:
   None
   """
+
   if options == 'Sentiment Analysis':
-    sentiment_analysis_page(sentimentAnalysis, sector)
+    sentiment_analysis_page(sentimentAnalysis, sector, country)
       
   elif options == 'Topic Modeling':
-    topic_modeling_page(topicModeling, sector)
+    topic_modeling_page()
   return None
 
 def sidebar(df : pd.DataFrame):
@@ -43,7 +44,8 @@ def sidebar(df : pd.DataFrame):
   Returns:
     tuple: A tuple containing the selected option and sector.
   """
-  st.sidebar.title('Loan Analysis')
+  # st.sidebar.image('assets/UOB-logo', width=200)
+  st.sidebar.title('Financial Loan Analysis')
   st.sidebar.header("Filter : ")
   
   options = st.sidebar.selectbox(
@@ -52,17 +54,23 @@ def sidebar(df : pd.DataFrame):
   )
   
   if options == 'Topic Modeling':
-    return options, None
+    return options, None, None
   
   sectors = df['Sector'].unique()
   sector = st.sidebar.selectbox(
     'Select the sector :',
     options = ['All'] + list(sectors)
   )
-    
-  return options, sector
+  
+  countries = df['Country'].unique()
+  country = st.sidebar.selectbox(
+    'Select the country :',
+    options = ['All'] + list(countries)
+  )
+  
+  return options, sector, country
 
-def sentiment_analysis_page(sentimentAnalysis, sector):
+def sentiment_analysis_page(sentimentAnalysis, sector, country):
   """
   Displays the sentiment analysis page with various visualization options.
 
@@ -73,29 +81,34 @@ def sentiment_analysis_page(sentimentAnalysis, sector):
   Returns:
   None
   """
-  st.text("Sentiment Analysis")
+  st.title("Sentiment Analysis")
   
   selection = ["Pie Chart", "WordCloud", "Dataframes", "Stacked Bar Chart"]  
   options = st.selectbox("Visualizations : ", selection)
   
   if options == "Pie Chart":
-    generate_pie_chart_page(sentimentAnalysis, sector)
+    generate_pie_chart_page(sentimentAnalysis, sector, country)
   elif options == "WordCloud":
-    generate_wordcloud_page(sentimentAnalysis, sector)                                             
+    generate_wordcloud_page(sentimentAnalysis, sector, country)                                             
   elif options == "Stacked Bar Chart":
-    generate_stacked_bar_chart_page(sentimentAnalysis)
+    generate_stacked_bar_chart_page(sentimentAnalysis, country)
   elif options == "Dataframes":
-    generate_dataframe_page(sentimentAnalysis, sector)
+    generate_dataframe_page(sentimentAnalysis, sector, country)
 
   return None
 
-def topic_modeling_page(topicModeling, sector):
-  slider = st.select_slider('Select the number of topics', options=[i for i in range(2, 21)])
-  filename = f'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topic_model_{slider}_topics.html'
+def topic_modeling_page():
+  """
+  Renders an interactive topic modeling page based on the number of topics selected.
 
+  Returns:
+    None
+  """
+  slider = st.slider('Select the number of topics', 3, 20, 2)
+  filename = f'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topic_model_{slider}_topics.html'
+  st.markdown(f'#### `Interactive topic Modeling based on the number of topics selected`')
   response = requests.get(filename)
   html_string = response.text
-
   components.html(html_string, width=4000, height=1500, scrolling=False)
   return None
 
@@ -109,9 +122,10 @@ def main():
     None
   """
   sentimentAnalysis = SentimentAnalysis("Sentiment Analysis Dashboard") ; sentimentAnalysis.read_data()
-  topicModeling = TopicModelling("Topic Modelling Dashboard")
-  options, sector = sidebar(sentimentAnalysis.df)
-  mainpage(sentimentAnalysis, topicModeling, options, sector)
+
+  
+  options, sector, country = sidebar(sentimentAnalysis.df)
+  mainpage(sentimentAnalysis, options, sector, country)
   return None
 
 if __name__ == '__main__':
