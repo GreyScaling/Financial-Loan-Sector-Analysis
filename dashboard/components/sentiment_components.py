@@ -15,7 +15,7 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   Returns:
     None
   """
-  model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
+  model_names = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
 
   
   for i in range(len(sentimentAnalysis.dfs)):
@@ -24,8 +24,10 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
     if country != 'All':
       sentimentAnalysis.dfs[i] = sentimentAnalysis.dfs[i][sentimentAnalysis.dfs[i]['Country'] == country]
   
-  st.markdown(f"#### Total value : {len(sentimentAnalysis.dfs[0])}")
-  st.markdown("#### `Pie chart based on the different sentiments results for all models `" , unsafe_allow_html=True)
+  st.markdown(f"###### Total value : {len(sentimentAnalysis.dfs[0])}")
+  st.markdown("#### Breakdown of the different sentiments based on the models for:" )
+  st.markdown(f"###### Sector: {sector} \n ###### Country: {country} " )
+
   left_column, right_column = st.columns(2)
   for i in range(len(sentimentAnalysis.dfs)):
     if i % 2 == 0:
@@ -60,7 +62,7 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
     wordcloud_df = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
     
   if country == "All":
-    wordcloud_df = wordcloud_df
+    pass
   else:
     wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
     
@@ -112,7 +114,7 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   Returns:
   - None
   """
-  model_names = ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments']
+  model_names = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
   category_names = ['Negative', 'Neutral', 'Positive']
   results = dict()
   
@@ -139,8 +141,6 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   st.pyplot(fig)
   st.markdown("#### `Bar chart based on every sectors for all models` ")
   for i , df in enumerate(sentimentAnalysis.dfs):
-    if country != "All":
-      df = df[df['Country'] == country]
     df = sentimentAnalysis.get_results_for_model(df, 'Sector')
     fig, ax = sentimentAnalysis.horizontalStackedBar(df, category_names, title=model_names[i] + " model")
     st.pyplot(fig)
