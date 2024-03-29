@@ -15,6 +15,8 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   Returns:
     None
   """
+  
+  # used for labeling the pie chart
   model_names = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
 
   for i in range(len(sentimentAnalysis.dfs)):
@@ -30,6 +32,7 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   left_column, right_column = st.columns(2)
   try:
     for i in range(len(sentimentAnalysis.dfs)):
+      # if the index is even, display the pie chart in the left column
       if i % 2 == 0:
         with left_column:
           st.subheader(model_names[i])
@@ -68,12 +71,14 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
         
   options = st.radio("Select the option", ["All", "Negative", "Neutral", "Positive"])
 
+  # dictionary to convert sentiment to numerical values
   sentimentsDict = {
     "Negative" : -1,
     "Neutral" : 0,
     "Positive" : 1
   }
 
+  # generate wordcloud for all sentiments
   if options == "All":
     wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df, sector=sector)
     #st.markdown(f'#### `Wordcloud for {sector.lower()} sector based on the country {country.lower()}` ')
@@ -86,26 +91,32 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
     st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')   
     left, right = st.columns(2)
     for i in range(len(columns)):
+      # if the index is even, display the wordcloud in the left column
       if i % 2 == 0:
         with left:
           try:
+            # making wordcloud for the selected sentiment
             column = columns[i] + "_Sentiments"
             subset = wordcloud_df[wordcloud_df[column] == sentimentsDict[options]]
             wordcloud = sentimentAnalysis.make_wordcloud(subset, sector=sector)
             st.markdown(f'#### {columns[i]}  Model')
             st.image(wordcloud.to_image())
+          # error handling 
           except ValueError:
             st.text("No data available")
           except KeyError:
             st.text("No data available")
       else:
+        # if the index is odd, display the wordcloud in the right column
         with right:
           try:
+            # making wordcloud for the selected sentiment
             column = columns[i] + "_Sentiments"
             subset = wordcloud_df[wordcloud_df[column] == sentimentsDict[options]]
             wordcloud = sentimentAnalysis.make_wordcloud(subset, sector=sector)
             st.markdown(f'#### {columns[i]}  Model')
             st.image(wordcloud.to_image())
+          # error handling
           except ValueError:
             st.text("No data available")
           except KeyError:
@@ -125,7 +136,7 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   model_names = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
   category_names = ['Negative', 'Neutral', 'Positive']
   results = dict()
-  
+  # iterate through the models
   for i in range(len(sentimentAnalysis.dfs)):
     data = sentimentAnalysis.dfs[i]
     if country != "All":
@@ -135,6 +146,7 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
     model_dict = data['sentiment'].value_counts().to_dict()
     print(model_dict)
     
+    # if the model does not have all the sentiments, add the missing sentiments
     if len(model_dict) < 3:
       for j in range(-1, 2):
         if j not in model_dict.keys():
@@ -143,12 +155,15 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
     model_list.append(model_dict[-1]); model_list.append(model_dict[0]); model_list.append(model_dict[1])
 
     results[model_names[i]] = model_list
+    
   st.markdown("##### Total value : " + str(len(data)))
   st.markdown("#### `Bar chart based on Sentiment Models` ")
   fig, ax = sentimentAnalysis.horizontalStackedBar(results, category_names, title="")
   st.pyplot(fig)
   st.markdown("#### `Bar chart based on every sectors for all models` ")
+  # iterate through the models
   for i , df in enumerate(sentimentAnalysis.dfs):
+    # generating the plot
     if country != "All":
       df = df[df['Country'] == country]
     df = sentimentAnalysis.get_results_for_model(df, 'Sector')
@@ -180,6 +195,7 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
   selected_columns = ['Title', 'Sector', 'Country'] + [f'{column}_Sentiments' for column in columns]
   st.markdown("##### Total value : " + str(len(df)))
   st.markdown(f"### `Dataframes based on the different sentiments results for all models `" , unsafe_allow_html=True)
+  # display the dataframe
   st.dataframe(
     df[selected_columns].reset_index(drop=True).style.applymap(
       sentimentAnalysis.sentiment_color, subset=[f'{column}_Sentiments' for column in columns]
