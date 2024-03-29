@@ -76,10 +76,14 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
 
   if options == "All":
     wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df, sector=sector)
-    st.markdown(f'#### `Wordcloud for {sector.lower()} sector based on the country {country.lower()}` ')
+    #st.markdown(f'#### `Wordcloud for {sector.lower()} sector based on the country {country.lower()}` ')
+    st.markdown(f'#### Wordcloud of the words used for:  ')
+    st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')
+
     st.image(wordcloud.to_image())
   else:
-    st.markdown(f'#### `Wordcloud for {options.lower()} sentiments in {sector.lower()} sector based on different models` ')
+    st.markdown(f'#### Wordcloud of the words used in {options.lower()} sentiments based on the different models for :  ')
+    st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')   
     left, right = st.columns(2)
     for i in range(len(columns)):
       if i % 2 == 0:
