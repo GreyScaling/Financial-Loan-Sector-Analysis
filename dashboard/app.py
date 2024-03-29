@@ -11,7 +11,6 @@ st.set_page_config(
   initial_sidebar_state="expanded"
 )
 
-
 def mainpage(sentimentAnalysis, options, sector, country):
   """
   This function is responsible for displaying the main page of the dashboard based on the selected options.
@@ -59,15 +58,17 @@ def sidebar(df : pd.DataFrame):
   sectors = df['Sector'].unique()
   sector = st.sidebar.selectbox(
     'Select the sector :',
-    options = ['All'] + list(sectors)
+    options = ['All'] + list(sectors),
+    key='sector',
   )
   
   countries = df['Country'].unique()
   country = st.sidebar.selectbox(
     'Select the country :',
-    options = ['All'] + list(countries)
+    options = ['All'] + list(countries),
+    key='country'
   )
-  
+
   return options, sector, country
 
 def sentiment_analysis_page(sentimentAnalysis, sector, country):
@@ -85,7 +86,7 @@ def sentiment_analysis_page(sentimentAnalysis, sector, country):
   
   selection = ["Pie Chart", "WordCloud", "Dataframes", "Stacked Bar Chart"]  
   options = st.selectbox("Visualizations : ", selection)
-  
+
   if options == "Pie Chart":
     generate_pie_chart_page(sentimentAnalysis, sector, country)
   elif options == "WordCloud":
@@ -94,6 +95,7 @@ def sentiment_analysis_page(sentimentAnalysis, sector, country):
     generate_stacked_bar_chart_page(sentimentAnalysis, country)
   elif options == "Dataframes":
     generate_dataframe_page(sentimentAnalysis, sector, country)
+  
 
   return None
 

@@ -29,18 +29,21 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   st.markdown(f"###### Sector: {sector} \n ###### Country: {country} " )
 
   left_column, right_column = st.columns(2)
-  for i in range(len(sentimentAnalysis.dfs)):
-    if i % 2 == 0:
-      with left_column:
-        st.subheader(model_names[i])
-        fig = sentimentAnalysis.make_pie_charts(sentimentAnalysis.dfs[i])
-        st.pyplot(fig)
-    else:
-      with right_column:
-        st.subheader(model_names[i])
-        fig = sentimentAnalysis.make_pie_charts(sentimentAnalysis.dfs[i])
-        st.pyplot(fig)
-  
+  try:
+    for i in range(len(sentimentAnalysis.dfs)):
+      if i % 2 == 0:
+        with left_column:
+          st.subheader(model_names[i])
+          fig = sentimentAnalysis.make_pie_charts(sentimentAnalysis.dfs[i])
+          st.pyplot(fig)
+      else:
+        with right_column:
+          st.subheader(model_names[i])
+          fig = sentimentAnalysis.make_pie_charts(sentimentAnalysis.dfs[i])
+          st.pyplot(fig)
+  except ValueError:
+    st.text("No data available")
+    
   return None
 
 def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
@@ -56,15 +59,23 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
   None
   """
   columns = ['Financial', 'Finbert', 'Sigma', 'Soleimanian', 'Yiyangkhost']
-  if sector == "All":
-    wordcloud_df = sentimentAnalysis.df
-  else:
+  
+  wordcloud_df = sentimentAnalysis.df
+  if sector != "All":
     wordcloud_df = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
-    
-  if country == "All":
-    pass
-  else:
+
+  if country != "All":
     wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
+    
+  # if sector == "All":
+  #   wordcloud_df = sentimentAnalysis.df
+  # else:
+  #   wordcloud_df = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
+    
+  # if country == "All":
+  #   pass
+  # else:
+  #   wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
     
   options = st.radio("Select the option", ["All", "Negative", "Neutral", "Positive"])
 
@@ -96,6 +107,8 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
             st.image(wordcloud.to_image())
           except ValueError:
             st.text("No data available")
+          except KeyError:
+            st.text("No data available")
       else:
         with right:
           try:
@@ -105,6 +118,8 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
             st.markdown(f'#### {columns[i]}  Model')
             st.image(wordcloud.to_image())
           except ValueError:
+            st.text("No data available")
+          except KeyError:
             st.text("No data available")
   return None
 
