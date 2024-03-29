@@ -60,7 +60,7 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
     wordcloud_df = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
     
   if country == "All":
-    pass
+    wordcloud_df = wordcloud_df
   else:
     wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
     
@@ -118,7 +118,7 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   
   for i in range(len(sentimentAnalysis.dfs)):
     if country == "All":
-      pass
+      data = sentimentAnalysis.dfs[i]
     else:
       data = sentimentAnalysis.dfs[i][sentimentAnalysis.dfs[i]['Country'] == country]
     model_list = []
@@ -139,6 +139,8 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   st.pyplot(fig)
   st.markdown("#### `Bar chart based on every sectors for all models` ")
   for i , df in enumerate(sentimentAnalysis.dfs):
+    if country != "All":
+      df = df[df['Country'] == country]
     df = sentimentAnalysis.get_results_for_model(df, 'Sector')
     fig, ax = sentimentAnalysis.horizontalStackedBar(df, category_names, title=model_names[i] + " model")
     st.pyplot(fig)
