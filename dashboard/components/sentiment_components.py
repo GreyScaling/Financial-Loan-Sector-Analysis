@@ -17,7 +17,6 @@ def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   """
   model_names = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
 
-  
   for i in range(len(sentimentAnalysis.dfs)):
     if sector != 'All':
       sentimentAnalysis.dfs[i] = sentimentAnalysis.dfs[i][sentimentAnalysis.dfs[i]['Sector'] == sector]
@@ -66,17 +65,7 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
 
   if country != "All":
     wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
-    
-  # if sector == "All":
-  #   wordcloud_df = sentimentAnalysis.df
-  # else:
-  #   wordcloud_df = sentimentAnalysis.df[sentimentAnalysis.df['Sector'] == sector]
-    
-  # if country == "All":
-  #   pass
-  # else:
-  #   wordcloud_df = wordcloud_df[wordcloud_df['Country'] == country]
-    
+        
   options = st.radio("Select the option", ["All", "Negative", "Neutral", "Positive"])
 
   sentimentsDict = {
@@ -138,10 +127,10 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   results = dict()
   
   for i in range(len(sentimentAnalysis.dfs)):
-    if country == "All":
-      data = sentimentAnalysis.dfs[i]
-    else:
-      data = sentimentAnalysis.dfs[i][sentimentAnalysis.dfs[i]['Country'] == country]
+    data = sentimentAnalysis.dfs[i]
+    if country != "All":
+      data = data[data['Country'] == country]
+    
     model_list = []
     model_dict = data['sentiment'].value_counts().to_dict()
     print(model_dict)
@@ -160,6 +149,8 @@ def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
   st.pyplot(fig)
   st.markdown("#### `Bar chart based on every sectors for all models` ")
   for i , df in enumerate(sentimentAnalysis.dfs):
+    if country != "All":
+      df = df[df['Country'] == country]
     df = sentimentAnalysis.get_results_for_model(df, 'Sector')
     fig, ax = sentimentAnalysis.horizontalStackedBar(df, category_names, title=model_names[i] + " model")
     st.pyplot(fig)
@@ -179,14 +170,10 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
   """
   df = sentimentAnalysis.df.reset_index()
 
-  if sector == "All":
-    pass
-  else:
+  if sector != "All":
     df = df[df['Sector'] == sector]
-
-  if country == "All":
-    pass
-  else:
+    
+  if country != "All":
     df = df[df['Country'] == country]
 
   columns = ['Financial', 'Finbert', 'Sigma', 'Soleimanian', 'Yiyangkhost']
