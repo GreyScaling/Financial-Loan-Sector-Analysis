@@ -194,7 +194,7 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
   st.markdown(f"### `Dataframes based on the different sentiments results for all models `" , unsafe_allow_html=True)
   # display the dataframe
   st.dataframe(
-    df[selected_columns].reset_index(drop=True).style.applymap(
+    df[selected_columns].reset_index(drop=True).style.map(
       sentimentAnalysis.sentiment_color, subset=[f'{column}_Sentiments' for column in columns]
     ),
     height=750
