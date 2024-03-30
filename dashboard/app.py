@@ -84,7 +84,7 @@ def sentiment_analysis_page(sentimentAnalysis, sector, country):
   """
   st.title("Sentiment Analysis")
   
-  selection = ["Pie Chart", "WordCloud", "Dataframes", "Stacked Bar Chart"]  
+  selection = ["Pie Chart", "WordCloud", "Dataframes", "Stacked Bar Chart", 'Mean Score']  
   options = st.selectbox("Visualizations : ", selection)
 
   if options == "Pie Chart":
@@ -95,7 +95,8 @@ def sentiment_analysis_page(sentimentAnalysis, sector, country):
     generate_stacked_bar_chart_page(sentimentAnalysis, country)
   elif options == "Dataframes":
     generate_dataframe_page(sentimentAnalysis, sector, country)
-  
+  elif options == 'Mean Score':
+    generate_mean_score_page(sentimentAnalysis, sector, country)
 
   return None
 

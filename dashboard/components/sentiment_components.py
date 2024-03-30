@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np 
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 def generate_pie_chart_page(sentimentAnalysis, sector="All", country="All"):
   """
@@ -80,47 +81,43 @@ def generate_wordcloud_page(sentimentAnalysis, sector, country="All"):
 
   # generate wordcloud for all sentiments
   if options == "All":
-    wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df, sector=sector)
-    #st.markdown(f'#### `Wordcloud for {sector.lower()} sector based on the country {country.lower()}` ')
-    st.markdown(f'#### Wordcloud of the words used for:  ')
-    st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')
-
-    st.image(wordcloud.to_image())
+    try:
+      wordcloud = sentimentAnalysis.make_wordcloud(wordcloud_df, sector=sector)
+      #st.markdown(f'#### `Wordcloud for {sector.lower()} sector based on the country {country.lower()}` ')
+      st.markdown(f'#### Wordcloud of the words used for:  ')
+      st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')
+      st.image(wordcloud.to_image())
+    except ValueError:
+      st.text("No data available")
   else:
     st.markdown(f'#### Wordcloud of the words used in {options.lower()} sentiments based on the different models for :  ')
-    st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ')   
-    left, right = st.columns(2)
-    for i in range(len(columns)):
-      # if the index is even, display the wordcloud in the left column
-      if i % 2 == 0:
-        with left:
-          try:
-            # making wordcloud for the selected sentiment
+    st.markdown(f'###### Sector: {sector}  \n ###### Country: {country}  ') 
+    try:  
+      left, right = st.columns(2)
+      for i in range(len(columns)):
+        # if the index is even, display the wordcloud in the left column
+        if i % 2 == 0:
+          with left:
+    
+              # making wordcloud for the selected sentiment
             column = columns[i] + "_Sentiments"
             subset = wordcloud_df[wordcloud_df[column] == sentimentsDict[options]]
             wordcloud = sentimentAnalysis.make_wordcloud(subset, sector=sector)
             st.markdown(f'#### {columns[i]}  Model')
             st.image(wordcloud.to_image())
-          # error handling 
-          except ValueError:
-            st.text("No data available")
-          except KeyError:
-            st.text("No data available")
-      else:
-        # if the index is odd, display the wordcloud in the right column
-        with right:
-          try:
-            # making wordcloud for the selected sentiment
+        else:
+          # if the index is odd, display the wordcloud in the right column
+          with right:
+              # making wordcloud for the selected sentiment
             column = columns[i] + "_Sentiments"
             subset = wordcloud_df[wordcloud_df[column] == sentimentsDict[options]]
             wordcloud = sentimentAnalysis.make_wordcloud(subset, sector=sector)
             st.markdown(f'#### {columns[i]}  Model')
             st.image(wordcloud.to_image())
-          # error handling
-          except ValueError:
-            st.text("No data available")
-          except KeyError:
-            st.text("No data available")
+    except ValueError:
+      st.text("No data available")
+
+      
   return None
 
 def generate_stacked_bar_chart_page(sentimentAnalysis, country="All"):
@@ -202,3 +199,22 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
     ),
     height=750
   )
+  
+def generate_mean_score_page(sentimentAnalysis, sector="All", country="All"):
+  
+  sentiment_model = st.selectbox("Select Sentiment Model", ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments'])
+
+  data = sentimentAnalysis.df
+  
+  if country != "All":
+    data = data[data['Country'] == country]
+  
+  mean_scores = data.groupby('Sector')[sentiment_model].mean().reset_index()
+  
+  fig = px.bar(mean_scores, x='Sector', y=sentiment_model,
+                labels={'Sector': 'Sector', sentiment_model: 'Mean Sentiment Score'},
+                title=f'Mean Sentiment Scores by Sector for {sentiment_model}',
+                width=800, height=500)
+
+  st.plotly_chart(fig)
+

@@ -119,22 +119,22 @@ class SentimentAnalysis:
     """
     data = df[colNames]
     
-    if sector == 'All':
-      sector = df['Sector'].unique()
-      remove_words = [word.split() for word in sector]
-      remove_words = [item for sublist in remove_words for item in sublist]
-      remove_words = remove_words + [word.lower() for word in remove_words] + [word.upper() for word in remove_words]
-      remove_words += "oil gas"
-      print(remove_words)
-      data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in sector]))
+    # if sector == 'All':
+    #   sector = df['Sector'].unique()
+    #   remove_words = [word.split() for word in sector]
+    #   remove_words = [item for sublist in remove_words for item in sublist]
+    #   remove_words = remove_words + [word.lower() for word in remove_words] + [word.upper() for word in remove_words]
+    #   remove_words += "oil gas"
+    #   print(remove_words)
+    #   data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in sector]))
   
-    else:
-      print(sector + " is getting removed")
-      # if sector is more than 1 word
-      sector_words = sector.split()
-      remove_words = sector_words + [word.lower() for word in sector_words] + [word.upper() for word in sector_words]
-      print(remove_words)
-      data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in remove_words]))
+    # else:
+    #   print(sector + " is getting removed")
+    #   # if sector is more than 1 word
+    #   sector_words = sector.split()
+    #   remove_words = sector_words + [word.lower() for word in sector_words] + [word.upper() for word in sector_words]
+    #   print(remove_words)
+    #   data = data.apply(lambda x: ' '.join([word for word in x.split() if word not in remove_words]))
      
     
     data = data.astype(str)
