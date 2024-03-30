@@ -212,6 +212,7 @@ def generate_mean_score_page(sentimentAnalysis, sector="All", country="All"):
   mean_scores = data.groupby('Sector')[sentiment_model].mean().reset_index()
   
   fig = px.bar(mean_scores, x='Sector', y=sentiment_model,
+               text = sentiment_model,text_auto='.2f',
                 labels={'Sector': 'Sector', sentiment_model: 'Mean Sentiment Score'},
                 title=f'Mean Sentiment Scores by Sector for {sentiment_model}',
                 width=800, height=500)
