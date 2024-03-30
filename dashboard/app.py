@@ -107,12 +107,20 @@ def topic_modeling_page():
   Returns:
     None
   """
-  slider = st.slider('Select the number of topics', 3, 20, 2)
-  filename = f'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topic_model_{slider}_topics.html'
-  st.markdown(f'#### `Interactive topic Modeling based on the number of topics selected`')
-  response = requests.get(filename)
-  html_string = response.text
-  components.html(html_string, width=4000, height=1500, scrolling=False)
+  options = st.selectbox("Visualizations : ", ['Interactive Topic Modeling', 'Coherence Score'])
+  if options == 'Interactive Topic Modeling':
+    slider = st.slider('Select the number of topics', 3, 20, 2)
+    filename = f'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topic_model_{slider}_topics.html'
+    st.markdown(f'#### `Interactive topic Modeling based on the number of topics selected`')
+    response = requests.get(filename)
+    html_string = response.text
+    components.html(html_string, width=4000, height=1500, scrolling=False)
+  elif options == 'Coherence Score':
+    filename = 'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/Topic Modelling/topics_coherence.png'
+    
+    st.markdown(f'#### `Coherence Score based on the number of topics`')
+    response = requests.get(filename)
+    st.image(response.content, width=800)
   return None
 
 def main():
