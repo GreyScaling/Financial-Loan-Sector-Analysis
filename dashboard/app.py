@@ -45,10 +45,10 @@ def sidebar(df : pd.DataFrame):
   """
 
   location = "https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/UOB-logo.png"
-
+  
   req = requests.get(location)
   img = req.content
-  st.sidebar.image(img , width=200)
+  st.sidebar.image(img)
  
   st.sidebar.title('Financial Loan Analysis')
   st.sidebar.header("Filter : ")
