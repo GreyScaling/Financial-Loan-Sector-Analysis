@@ -43,7 +43,13 @@ def sidebar(df : pd.DataFrame):
   Returns:
     tuple: A tuple containing the selected option and sector.
   """
-  # st.sidebar.image('assets/UOB-logo', width=200)
+
+  location = "https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/UOB-logo.png"
+
+  req = requests.get(location)
+  img = req.content
+  st.sidebar.image(img , width=200)
+ 
   st.sidebar.title('Financial Loan Analysis')
   st.sidebar.header("Filter : ")
   
@@ -69,6 +75,7 @@ def sidebar(df : pd.DataFrame):
     key='country'
   )
 
+  
   return options, sector, country
 
 def sentiment_analysis_page(sentimentAnalysis, sector, country):
