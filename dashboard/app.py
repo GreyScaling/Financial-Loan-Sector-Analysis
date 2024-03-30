@@ -44,8 +44,8 @@ def sidebar(df : pd.DataFrame):
     tuple: A tuple containing the selected option and sector.
   """
 
-  location = "https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/UOB-logo.png"
-  
+  location = "https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/uob_logo.png"
+
   req = requests.get(location)
   img = req.content
   st.sidebar.image(img)
@@ -123,7 +123,7 @@ def topic_modeling_page():
     html_string = response.text
     components.html(html_string, width=4000, height=1500, scrolling=False)
   elif options == 'Coherence Score':
-    filename = 'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/Topic Modelling/topics_coherence.png'
+    filename = 'https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/topics_coherence.png'
     
     st.markdown(f'#### `Coherence Score based on the number of topics`')
     response = requests.get(filename)
