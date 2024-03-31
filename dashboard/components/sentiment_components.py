@@ -201,21 +201,21 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
   )
   
 def generate_mean_score_page(sentimentAnalysis, sector="All", country="All"):
-  
-  sentiment_model = st.selectbox("Select Sentiment Model", ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments'])
-
+  models = ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments']
+  sentiment_model = st.selectbox("Select Sentiment Model",models)
+  column_name = sentiment_model.replace(' ', '_')
   data = sentimentAnalysis.df
   
   if country != "All":
     data = data[data['Country'] == country]
   
-  mean_scores = data.groupby('Sector')[sentiment_model].mean().reset_index()
+  mean_scores = data.groupby('Sector')[column_name].mean().reset_index()
   
-  fig = px.bar(mean_scores, x='Sector', y=sentiment_model,
-               text = sentiment_model,text_auto='.2f',
+  fig = px.bar(mean_scores, x='Sector', y=column_name,
+               text = column_name,text_auto='.2f',
                 labels={'Sector': 'Sector', sentiment_model: 'Mean Sentiment Score'},
-                title=f'Mean Sentiment Scores by Sector for {sentiment_model}',
+                title=f'Mean Sentiment Scores of all sectors for {sentiment_model}',
                 width=800, height=500)
-
+  fig.update_layout(yaxis_title =f'{sentiment_model} Model')
   st.plotly_chart(fig)
 
