@@ -202,7 +202,7 @@ def generate_dataframe_page(sentimentAnalysis, sector="All", country="All"):
   
 def generate_mean_score_page(sentimentAnalysis, sector="All", country="All"):
   
-  sentiment_model = st.selectbox("Select Sentiment Model", ['Financial_Sentiments', 'Finbert_Sentiments', 'Sigma_Sentiments', 'Soleimanian_Sentiments', 'Yiyangkhost_Sentiments'])
+  sentiment_model = st.selectbox("Select Sentiment Model", ['Financial Sentiments', 'Finbert Sentiments', 'Sigma Sentiments', 'Soleimanian Sentiments', 'Yiyangkhost Sentiments'])
 
   data = sentimentAnalysis.df
   
