@@ -13,7 +13,7 @@ This project performs web scraping, sentiment analysis, and topic modeling on th
 
 1. Clone this repository.
   ```bash
-  git clone https://github.com/GreyScaling/UOB-Financial-Loan-Analysis/
+  git clone https://github.com/GreyScaling/Financial-Loan-Sector-Analysis/
   ```
    
 2. Install the required packages:
