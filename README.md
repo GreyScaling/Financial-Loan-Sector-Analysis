@@ -1,4 +1,4 @@
-# UOB-Financial Loan Market Analysis
+# Financial Loan Sector Analysis
 
 This project performs web scraping, sentiment analysis, and topic modeling on the financial loan market based on a few sectors. It also includes an interactive dashboard to visualize the findings.
 
