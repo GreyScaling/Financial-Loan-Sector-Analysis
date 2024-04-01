@@ -37,6 +37,9 @@ Follow these steps to view the interactive dashboard:
   streamlit run app.py
   ```
 
+A live demo can be found at: https://financial-loan-sector-analysis.streamlit.app/
+
+
 ## Documentation
 
 1. Web Scraping
