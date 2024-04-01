@@ -44,13 +44,7 @@ def sidebar(df : pd.DataFrame):
     tuple: A tuple containing the selected option and sector.
   """
 
-  location = "https://raw.githubusercontent.com/GreyScaling/UOB-Financial-Loan-Analysis/main/dashboard/assets/uob_logo.png"
-
-  req = requests.get(location)
-  img = req.content
-  st.sidebar.image(img)
- 
-  st.sidebar.title('Financial Loan Analysis')
+  st.sidebar.title('Financial Loan Sector Analysis')
   st.sidebar.header("Filter : ")
   
   options = st.sidebar.selectbox(
