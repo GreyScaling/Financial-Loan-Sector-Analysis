@@ -37,4 +37,48 @@ Follow these steps to view the interactive dashboard:
   streamlit run app.py
   ```
 
+## Documentation
 
+1. Web Scraping
+- Process:
+Scrapers located in the scrapers folder are used to collect data.
+Each scraper generates a CSV file within its respective folder.
+- Manual Intervention:
+The generated CSVs are manually copied and pasted into the csvs folder.
+- Justification:
+This manual step prevents accidental overwriting of working data in case of scraping errors that might create empty CSVs.
+
+2. Sentiment Analysis
+- Process: <br>
+The sentiment analysis script reads all CSV files within the csvs folder.It performs sentiment analysis on the concatinated data using various models.Outputs are generated for each model and saved within the sentiment_analysis folder. 
+    - Outputs are:
+        - combined_sentiments.csv
+        - financial_sentiments.csv
+        - finbert_sentiments.csv
+        - sigma_sentiments.csv
+        - soleimanian_sentiments.csv
+        - yiyanghost_sentiments.csv
+- Manual Intervention:
+The generated CSVs are manually copied and pasted into the dashboard/csvs folder.
+- Justification:
+This manual step prevents accidental overwriting of working data in case of  errors that might create empty CSVs.
+
+3. Topic Modeling
+Process:
+The topic modeling script reads all CSV files within the csvs folder.
+It performs topic modeling on each file, creating 19 models with varying numbers of topics (2 to 20).
+Each model generates an HTML dashboard file showcasing the identified topics.
+Additionally, the script calculates coherence scores for each model and creates a plot visualization.
+All outputs (HTML dashboards, coherence score plots) are saved within the topic_modeling folder.
+- Manual Intervention:
+The generated CSVs are manually copied and pasted into the dashboard/assets folder.
+- Justification:
+This manual step allows the user to try different pre-processing steps/changes in the algorithm that would affect the topics without affecting the files meant for the dashboard
+
+4. Data Visualization Dashboard
+Process:
+The dashboard script reads the data files from the dashboard folder, specifically:
+CSV files located in the csvs subfolder (presumably containing sentiment analysis results).
+HTML file located in the assets subfolder (likely the topic modeling dashboard).
+Coherence score plot also located in the assets subfolder.
+Based on the read data, the script generates visualizations for the dashboard.
